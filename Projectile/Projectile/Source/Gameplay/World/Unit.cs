@@ -9,37 +9,23 @@ using Microsoft.Xna.Framework.Input;
 
 namespace Projectile
 {
-    public class Thief : Basic2D
+    public class Unit : Basic2D
     {
-        
-        public Thief(String PATH, Vector2 POS, Vector2 DIMS) : base(PATH, POS, DIMS)
+        public static int count = 0;
+        public Unit(String PATH, Vector2 POS, Vector2 DIMS) : base(PATH, POS, DIMS)
         {
 
         }
 
         public override void Update(GameTime gameTime)
         {
-            if (Globals.keyboard.GetPress("A"))
-            {
-                pos = new Vector2(pos.X - 4, pos.Y);
-            }
-
-            if (Globals.keyboard.GetPress("D"))
-            {
-                pos = new Vector2(pos.X + 4, pos.Y);
-            }
-
-            if (Globals.keyboard.GetPress("Space"))
-            {
-                isAim = true;
-            }
+           
 
             base.Update(gameTime);
         }
 
         public override void Draw(Vector2 OFFSET)
         {
-
             base.Draw(OFFSET);
         }
 

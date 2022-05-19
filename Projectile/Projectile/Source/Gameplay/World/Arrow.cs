@@ -9,32 +9,38 @@ using Microsoft.Xna.Framework.Input;
 
 namespace Projectile
 {
-    public class Arrow : Basic2D
+    public class Arrow : Unit
     {
+        public float speed;
+
         public Arrow(String PATH, Vector2 POS, Vector2 DIMS) : base(PATH, POS, DIMS)
         {
-
+            speed = 2.0f;
         }
 
-        public override void Update()
+        public override void Update(GameTime gameTime)
         {
-            if (Globals.keyboard.GetPress("W"))
-            {
-                pos = new Vector2(pos.X, pos.Y+1);
+
+            rot = Globals.RotateTowards(pos, new Vector2(Globals.mouse.newMouse.X, Globals.mouse.newMouse.Y));
+
+            if (0 <= rot && rot <= 180){
+                if (Globals.mouse.LeftClick())
+                {
+                    GameGlobals.PassProjectile(new obj("titan", new Vector2(pos.X, pos.Y), this, new Vector2(Globals.mouse.newMousePos.X, Globals.mouse.newMousePos.Y)));
+                }
             }
 
-            if (Globals.keyboard.GetPress("S"))
-            {
-                pos = new Vector2(pos.X, pos.Y-1);
-            }
-
-            base.Update();
+            base.Update(gameTime);
         }
 
         public override void Draw(Vector2 OFFSET)
         {
 
-            base.Draw(OFFSET);
+            if (0 <= rot && rot <= 180)
+            {
+                base.Draw(OFFSET);
+            }
+
         }
 
     }

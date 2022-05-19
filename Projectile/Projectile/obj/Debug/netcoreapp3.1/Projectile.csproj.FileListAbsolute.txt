@@ -27,3 +27,5 @@
 /Users/aomms/comgame/Projectile/Projectile/bin/Debug/netcoreapp3.1/Content/thief.xnb
 /Users/aomms/comgame/Projectile/Projectile/bin/Debug/netcoreapp3.1/Content/textures/Background.png
 /Users/aomms/comgame/Projectile/Projectile/bin/Debug/netcoreapp3.1/Content/arrow.xnb
+/Users/aomms/comgame/Projectile/Projectile/bin/Debug/netcoreapp3.1/Content/aiming.xnb
+/Users/aomms/comgame/Projectile/Projectile/bin/Debug/netcoreapp3.1/Content/titan.xnb

@@ -12,7 +12,6 @@
   <ItemGroup>
     <None Remove="Icon.ico" />
     <None Remove="Icon.bmp" />
-    <None Remove="Players\" />
     <None Remove="Content\textures\" />
     <None Remove="Source\" />
     <None Remove="Source\Engine\" />
@@ -21,6 +20,7 @@
     <None Remove="Source\Gameplay\" />
     <None Remove="Source\Gameplay\World\" />
     <None Remove="Source\Gameplay\World\Units\" />
+    <None Remove="Source\Gameplay\World\Projectile\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Icon.ico" />
@@ -37,7 +37,6 @@
     <PackageReference Include="MonoGame.Content.Builder.Task" Version="3.8.0.1641" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Players\" />
     <Folder Include="Content\textures\" />
     <Folder Include="Source\" />
     <Folder Include="Source\Engine\" />
@@ -46,6 +45,7 @@
     <Folder Include="Source\Gameplay\" />
     <Folder Include="Source\Gameplay\World\" />
     <Folder Include="Source\Gameplay\World\Units\" />
+    <Folder Include="Source\Gameplay\World\Projectile\" />
   </ItemGroup>
   <ItemGroup>
     <None Update="Content\textures\Background.png">

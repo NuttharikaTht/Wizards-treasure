@@ -44,6 +44,7 @@ namespace Projectile
             {
                 tempStr = KEY;
             }
+            
             if (KEY == "Space")
             {
                 tempStr = " ";
