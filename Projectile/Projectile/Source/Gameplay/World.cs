@@ -21,7 +21,7 @@ namespace Projectile
         {
 
             thief = new Thief("thief", new Vector2(20, 400), new Vector2(40, 40));
-            arrow = new Arrow("arrow", new Vector2(100, 380), new Vector2(40, 40));
+            //if(thief != null) arrow = new Arrow("arrow", new Vector2 (thief.pos.X+20, thief.pos.Y), new Vector2(40, 40));
 
             //set PaddProjectile to AddProjectile Func
             GameGlobals.PassProjectile = AddProjectile;
@@ -31,7 +31,7 @@ namespace Projectile
         {
             thief.Update(gameTime);
             if (thief.checkAim()) {
-                arrow.Update(gameTime);
+                thief.arrow.Update(gameTime);
             }
 
             for (int i=0; i<projectiles.Count; i++)
@@ -55,7 +55,7 @@ namespace Projectile
         {
             thief.Draw(OFFSET);
             if (thief.checkAim()) {
-                arrow.Draw(OFFSET);
+                thief.arrow.Draw(OFFSET);
             }
 
             for (int i = 0; i < projectiles.Count; i++)

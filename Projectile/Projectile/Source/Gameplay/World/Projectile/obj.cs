@@ -12,11 +12,11 @@ namespace Projectile
     public class obj : Projectile2D
     {
 
-        public obj(String PATH, Vector2 POS, Unit OWNER, Vector2 TARGET)
+        public obj(String PATH, Vector2 POS, Unit OWNER, Vector2 TARGET, Vector2 Velocity)
             : base(PATH, POS, new Vector2(40,40), OWNER, TARGET)
         {
             initialPosition = new Vector2(100, 400);
-            initialVelocity = new Vector2(10, 10);
+            initialVelocity = Velocity; //new Vector2(10, 10);
             acceleration = new Vector2(0, -9.8f);
         }
 

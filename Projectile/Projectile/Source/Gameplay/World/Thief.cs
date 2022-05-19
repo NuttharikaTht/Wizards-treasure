@@ -11,10 +11,11 @@ namespace Projectile
 {
     public class Thief : Basic2D
     {
-        
+        public Arrow arrow;
+
         public Thief(String PATH, Vector2 POS, Vector2 DIMS) : base(PATH, POS, DIMS)
         {
-
+            arrow = new Arrow("arrow", new Vector2(pos.X + 20, pos.Y), new Vector2(40, 40));
         }
 
         public override void Update(GameTime gameTime)
@@ -32,8 +33,9 @@ namespace Projectile
             if (Globals.keyboard.GetPress("Space"))
             {
                 isAim = true;
+                arrow.pos = new Vector2(pos.X+60, pos.Y);
             }
-
+            
             base.Update(gameTime);
         }
 

@@ -18,15 +18,16 @@ namespace Projectile
 
         public Texture2D model;
 
-        public bool isAim;
+        public bool isAim = false;
 
         public Basic2D(String PATH, Vector2 POS, Vector2 DIMS)
         {
 
             pos = POS;
             dims = DIMS;
-
+            
             model = Globals.content.Load<Texture2D>(PATH);
+
         }
         public virtual bool checkAim()
         {
@@ -35,7 +36,7 @@ namespace Projectile
 
         public virtual void Update(GameTime gameTime)
         {
-
+            
         }
 
         public virtual void Draw(Vector2 OFFSET)

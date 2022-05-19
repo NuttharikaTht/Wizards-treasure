@@ -26,7 +26,7 @@ namespace Projectile
             if (0 <= rot && rot <= 180){
                 if (Globals.mouse.LeftClick())
                 {
-                    GameGlobals.PassProjectile(new obj("titan", new Vector2(pos.X, pos.Y), this, new Vector2(Globals.mouse.newMousePos.X, Globals.mouse.newMousePos.Y)));
+                    GameGlobals.PassProjectile(new obj("titan", new Vector2(pos.X, pos.Y), this, new Vector2(Globals.mouse.newMousePos.X, Globals.mouse.newMousePos.Y), new Vector2(10, 10)));
                 }
             }
 
