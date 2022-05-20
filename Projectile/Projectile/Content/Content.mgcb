@@ -12,6 +12,14 @@
 
 
 #---------------------------------- Content ---------------------------------#
+
+#begin fonts/Minecraft.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:fonts/Minecraft.spritefont
+
 #begin textures/background.png
 /importer:TextureImporter
 /processor:TextureProcessor

@@ -21,6 +21,8 @@
     <None Remove="Source\Gameplay\World\" />
     <None Remove="Source\Gameplay\World\Units\" />
     <None Remove="Source\Gameplay\World\Projectile\" />
+    <None Remove="Source\Gameplay\World\Player\" />
+    <None Remove="Content\fonts\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Icon.ico" />
@@ -46,6 +48,8 @@
     <Folder Include="Source\Gameplay\World\" />
     <Folder Include="Source\Gameplay\World\Units\" />
     <Folder Include="Source\Gameplay\World\Projectile\" />
+    <Folder Include="Source\Gameplay\World\Player\" />
+    <Folder Include="Content\fonts\" />
   </ItemGroup>
   <ItemGroup>
     <None Update="Content\textures\Background.png">

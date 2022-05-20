@@ -12,9 +12,10 @@ namespace Projectile
     public class Unit : Basic2D
     {
         public static int count = 0;
-        public Unit(String PATH, Vector2 POS, Vector2 DIMS) : base(PATH, POS, DIMS)
+        public bool isThief;
+        public Unit(String PATH, Vector2 POS, Vector2 DIMS, bool ISTHIEF) : base(PATH, POS, DIMS)
         {
-
+            isThief = ISTHIEF;
         }
 
         public override void Update(GameTime gameTime)

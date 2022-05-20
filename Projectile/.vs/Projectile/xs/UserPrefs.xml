@@ -1,0 +1,45 @@
+﻿<Properties StartupConfiguration="{2AC6D68A-6993-428A-8159-013AB0C9BA28}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Projectile/Source/Engine/Basic2D.cs">
+    <Files>
+      <File FileName="Projectile/Source/Gameplay/World/Player/Thief.cs" Line="16" Column="85" />
+      <File FileName="Projectile/Source/Engine/Player.cs" Line="1" Column="1" />
+      <File FileName="Projectile/Source/Gameplay/World/Projectile/Projectile2D.cs" Line="38" Column="18" />
+      <File FileName="Projectile/Source/Gameplay/World/Arrow.cs" Line="11" Column="2" />
+      <File FileName="Projectile/Source/Gameplay/World/Unit.cs" Line="19" Column="10" />
+      <File FileName="Projectile/Source/Gameplay/World/Projectile/obj.cs" Line="1" Column="1" />
+      <File FileName="Projectile/Source/Engine/Basic2D.cs" Line="21" Column="35" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Projectile" expanded="True">
+            <Node name="Projectile" expanded="True">
+              <Node name="Content" expanded="True">
+                <Node name="fonts" expanded="True" />
+              </Node>
+              <Node name="Players" expanded="True" />
+              <Node name="Source" expanded="True">
+                <Node name="Engine" expanded="True">
+                  <Node name="Basic2D.cs" selected="True" />
+                </Node>
+                <Node name="Gameplay" expanded="True">
+                  <Node name="World" expanded="True">
+                    <Node name="Player" expanded="True" />
+                    <Node name="Projectile" expanded="True" />
+                  </Node>
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Projectile PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

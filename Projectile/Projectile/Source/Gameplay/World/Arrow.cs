@@ -13,7 +13,7 @@ namespace Projectile
     {
         public float speed;
 
-        public Arrow(String PATH, Vector2 POS, Vector2 DIMS) : base(PATH, POS, DIMS)
+        public Arrow(String PATH, Vector2 POS, Vector2 DIMS, bool ISTHIEF) : base(PATH, POS, DIMS, ISTHIEF)
         {
             speed = 2.0f;
         }

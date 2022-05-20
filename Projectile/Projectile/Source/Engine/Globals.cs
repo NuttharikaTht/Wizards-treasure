@@ -15,8 +15,13 @@ namespace Projectile
     public class Globals
     {
         public static int screenWidth, screenHeight;
+        static int power = 0;
+        public static int Power
+        {
+            get { return power; }
+            set { if (value >= 0 && value <= 100) power = value; }
+        }
 
-        
         public static ContentManager content;
         public static SpriteBatch spriteBatch;
 

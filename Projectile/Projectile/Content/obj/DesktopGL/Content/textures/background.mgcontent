@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>/Users/aomms/comgame/Projectile/Projectile/Content/textures/background.png</SourceFile>
-  <SourceTime>2022-05-19T01:53:59.1344135+07:00</SourceTime>
-  <DestFile>/Users/aomms/comgame/Projectile/Projectile/Content/bin/DesktopGL/Content/textures/background.xnb</DestFile>
-  <DestTime>2022-05-19T04:04:47.2934008+07:00</DestTime>
+  <SourceFile>/Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/Content/textures/background.png</SourceFile>
+  <SourceTime>2022-05-20T00:35:31.2153579+07:00</SourceTime>
+  <DestFile>/Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/Content/bin/DesktopGL/Content/textures/background.xnb</DestFile>
+  <DestTime>2022-05-20T11:57:26.6197441+07:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2020-08-10T16:17:54+07:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
