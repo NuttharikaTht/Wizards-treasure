@@ -28,6 +28,7 @@ namespace Projectile
                 pos = new Vector2(pos.X + 4, pos.Y);
             }
 
+
             base.Update();
         }
 
