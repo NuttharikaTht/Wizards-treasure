@@ -1,0 +1,52 @@
+﻿<Properties StartupConfiguration="{2AC6D68A-6993-428A-8159-013AB0C9BA28}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Projectile/Source/Gameplay/World/Player/Thief.cs">
+    <Files>
+      <File FileName="Projectile/Source/Gameplay/World/Arrow.cs" Line="37" Column="1" />
+      <File FileName="Projectile/Source/Gameplay/World/Projectile/Projectile2D.cs" Line="71" Column="1" />
+      <File FileName="Projectile/Source/Gameplay/World/Structure/Structure.cs" Line="34" Column="116" />
+      <File FileName="Projectile/Source/Gameplay/World/Projectile/obj.cs" Line="23" Column="28" />
+      <File FileName="Projectile/Source/Engine/Basic2D.cs" Line="18" Column="34" />
+      <File FileName="Projectile/Source/Gameplay/World/Structure/Floor.cs" Line="1" Column="1" />
+      <File FileName="Projectile/Source/Gameplay/World.cs" Line="29" Column="37" />
+      <File FileName="Projectile/Main.cs" Line="86" Column="1" />
+      <File FileName="Projectile/Source/Gameplay/World/Player/Wizard.cs" Line="1" Column="1" />
+      <File FileName="Projectile/Source/Gameplay/World/Player/Thief.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Projectile" expanded="True">
+            <Node name="Projectile" expanded="True">
+              <Node name="Content" expanded="True">
+                <Node name="fonts" expanded="True" />
+                <Node name="screen" expanded="True">
+                  <Node name="home_screen" expanded="True" />
+                </Node>
+                <Node name="textures" expanded="True" />
+              </Node>
+              <Node name="Source" expanded="True">
+                <Node name="Engine" expanded="True" />
+                <Node name="Gameplay" expanded="True">
+                  <Node name="World" expanded="True">
+                    <Node name="Player" expanded="True">
+                      <Node name="Thief.cs" selected="True" />
+                    </Node>
+                    <Node name="Projectile" expanded="True" />
+                    <Node name="Structure" expanded="True" />
+                  </Node>
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Projectile PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

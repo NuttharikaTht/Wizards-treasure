@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Profile>Reach</Profile>
+  <Platform>DesktopGL</Platform>
+  <Config />
+  <SourceFiles>
+    <File>/Users/aomms/comgame/Projectile/Projectile/Content/fonts/Minecraft.spritefont</File>
+    <File>/Users/aomms/comgame/Projectile/Projectile/Content/fonts/Minecraft_24.spritefont</File>
+    <File>/Users/aomms/comgame/Projectile/Projectile/Content/screen/home_screen/bg.png</File>
+    <File>/Users/aomms/comgame/Projectile/Projectile/Content/textures/player/thief.png</File>
+    <File>/Users/aomms/comgame/Projectile/Projectile/Content/textures/player/wizard.png</File>
+    <File>/Users/aomms/comgame/Projectile/Projectile/Content/textures/shooter/arrow.png</File>
+    <File>/Users/aomms/comgame/Projectile/Projectile/Content/textures/ammo/thief/titan.png</File>
+    <File>/Users/aomms/comgame/Projectile/Projectile/Content/textures/shooter/aiming.png</File>
+    <File>/Users/aomms/comgame/Projectile/Projectile/Content/textures/floor.png</File>
+    <File>/Users/aomms/comgame/Projectile/Projectile/Content/textures/rect.png</File>
+    <File>/Users/aomms/comgame/Projectile/Projectile/Content/textures/obj.png</File>
+  </SourceFiles>
+  <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+  </DestFiles>
+</SourceFileCollection>
