@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>C:/Users/Windows/Desktop/Game_pro/Final/Wizards-treasure-main/Projectile/Projectile/Content/arrow.png</SourceFile>
-  <SourceTime>2022-05-19T12:45:11+07:00</SourceTime>
-  <DestFile>C:/Users/Windows/Desktop/Game_pro/Final/Wizards-treasure-main/Projectile/Projectile/Content/bin/DesktopGL/Content/arrow.xnb</DestFile>
-  <DestTime>2022-05-19T18:09:06.531221+07:00</DestTime>
+  <SourceFile>C:/Users/Windows/Desktop/Game_pro/Final/Wizards-treasure-main/Projectile/Projectile/Content/Letter.png</SourceFile>
+  <SourceTime>2022-05-19T20:06:51.5119445+07:00</SourceTime>
+  <DestFile>C:/Users/Windows/Desktop/Game_pro/Final/Wizards-treasure-main/Projectile/Projectile/Content/bin/DesktopGL/Letter.xnb</DestFile>
+  <DestTime>2022-05-19T20:07:58.7357979+07:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2020-08-10T23:17:54+07:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
