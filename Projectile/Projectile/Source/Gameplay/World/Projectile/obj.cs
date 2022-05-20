@@ -13,11 +13,15 @@ namespace Projectile
     {
 
         public obj(String PATH, Vector2 POS, Unit OWNER, Vector2 TARGET, Vector2 Velocity)
-            : base(PATH, POS, new Vector2(40,40), OWNER, TARGET)
+            : base(PATH, POS, new Vector2(40, 40), OWNER, TARGET)
         {
-            initialPosition = new Vector2(100, 400);
+
+            initialPosition = new Vector2(POS.X, POS.Y);
             initialVelocity = Velocity; //new Vector2(10, 10);
             acceleration = new Vector2(0, -9.8f);
+            isHit = false;
+            isDone = false;
+            //done = false;
         }
 
         public override void Update(GameTime gameTime, Vector2 OFFSET, List<Unit> UNITS)

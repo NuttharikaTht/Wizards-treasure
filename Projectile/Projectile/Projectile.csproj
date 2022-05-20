@@ -23,6 +23,7 @@
     <None Remove="Source\Gameplay\World\Projectile\" />
     <None Remove="Source\Gameplay\World\Player\" />
     <None Remove="Content\fonts\" />
+    <None Remove="Source\Gameplay\World\Wall\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Icon.ico" />
@@ -50,6 +51,7 @@
     <Folder Include="Source\Gameplay\World\Projectile\" />
     <Folder Include="Source\Gameplay\World\Player\" />
     <Folder Include="Content\fonts\" />
+    <Folder Include="Source\Gameplay\World\Wall\" />
   </ItemGroup>
   <ItemGroup>
     <None Update="Content\textures\Background.png">

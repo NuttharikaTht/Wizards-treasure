@@ -30,7 +30,8 @@ namespace Projectile
                 if (Globals.mouse.LeftClick())
                 {
                     owner.Firing();
-                    GameGlobals.PassProjectile(new obj("ammo/thief/titan", new Vector2(pos.X, pos.Y), this, new Vector2(Globals.mouse.newMousePos.X, Globals.mouse.newMousePos.Y), new Vector2(10, 10)));
+                    //GameGlobals.PassProjectile(new obj("ammo/thief/titan", new Vector2(pos.X, pos.Y - 20), this, new Vector2(Globals.mouse.newMousePos.X, Globals.mouse.newMousePos.Y), new Vector2(10, 10)));
+                    GameGlobals.PassProjectile(new obj("ammo/thief/titan", new Vector2(pos.X, pos.Y - 20), this, new Vector2(Globals.mouse.newMousePos.X, Globals.mouse.newMousePos.Y), new Vector2(10, 10)));
                 }
             }
 

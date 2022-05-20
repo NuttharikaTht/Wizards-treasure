@@ -30,31 +30,48 @@ namespace Projectile
         {
             owner = OWNER;
 
+            rect = new Rectangle((int)pos.X, (int)pos.Y, (int)dims.X, (int)dims.Y);
+
             rot = Globals.RotateTowards(pos, new Vector2(TARGET.X, TARGET.Y));
 
             direction = TARGET - owner.pos;
             direction.Normalize();
 
-
-            //pos = initialPosition;
-
-            //timer = new McTimer(12000);
         }
 
         public virtual void Update(GameTime gameTime, Vector2 OFFSET, List<Unit> UNITS)
         {
             int direc = owner.isThief ? 1 : -1;
+            if (!isHit)
+            {
+                time += (float)gameTime.ElapsedGameTime.TotalSeconds;
+                //pos = initialPosition + initialVelocity * time + 0.5f * acceleration * time * time;
+                pos.X += direction.X * (((float)Globals.Power / 10) * (float)Math.Cos(rot) * time);
+                pos.Y += direction.Y * ((((float)Globals.Power / 10) * (direc * (float)Math.Sin(rot)) * time) - (0.5f * 9.8f * time * time));
 
-            time += (float)gameTime.ElapsedGameTime.TotalSeconds;
-            //pos = initialPosition + initialVelocity * time + 0.5f * acceleration * time * time;
-            pos.X += direction.X * (((float)Globals.Power/10) * (float)Math.Cos(rot) * time);
-            pos.Y += direction.Y * ((((float)Globals.Power / 10) * (direc * (float)Math.Sin(rot)) * time) - (0.5f * 9.8f * time * time));
+                rect = new Rectangle((int)pos.X, (int)pos.Y, (int)dims.X, (int)dims.Y);
+
+            }
         }
 
         public override void Draw(Vector2 OFFSET)
         {
+            if (!isDone)
+            {
+                if (!isHit)
+                {
+                    base.Draw(OFFSET);
+                    //rect = new Rectangle((int)pos.X, (int)pos.Y, (int)dims.X, (int)dims.Y);
+                }
+                else
+                {
+                    base.Draw(OFFSET);
+                    isDone = true;
+                }
 
-            base.Draw(OFFSET);
+                isHit = collision(this, World.floor);
+            }
+
 
         }
         public virtual bool IsHit(List<Unit> UNITS)

@@ -34,6 +34,7 @@ namespace Projectile.States
         Basic2D cursur;
 
 
+
         public GameState(Main game, GraphicsDevice graphicsDevice, ContentManager content)
           : base(game, graphicsDevice, content)
         {
@@ -45,7 +46,8 @@ namespace Projectile.States
 
             world = new World();
 
-           //
+            //
+            Globals.ResetTimer();
             bg_game = _content.Load<Texture2D>("GameState/bg_game");
             bg_time = _content.Load<Texture2D>("GameState/time");
 
@@ -79,9 +81,6 @@ namespace Projectile.States
             {
                 resumeGameButton,
             };
-
-
-
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
@@ -95,7 +94,7 @@ namespace Projectile.States
                    component.Draw(gameTime, spriteBatch);
 
             // time
-            Globals.spriteBatch.DrawString(gameFont, Time.ToString("00" + "  S"), new Vector2(664, 50), Color.White);
+            Globals.spriteBatch.DrawString(gameFont, Globals.timer.ToString("00" + "  S"), new Vector2(664, 50), Color.White);
 
             
 
@@ -135,7 +134,7 @@ namespace Projectile.States
                     component.Update(gameTime);
 
                 // update time
-                Time -= (float)gameTime.ElapsedGameTime.TotalSeconds;
+                Globals.timer -= (float)gameTime.ElapsedGameTime.TotalSeconds;
 
                 //update game play
                 Globals.gameTime = gameTime;

@@ -9,19 +9,17 @@ using Microsoft.Xna.Framework.Input;
 
 namespace Projectile
 {
-    public class Unit : Basic2D
+    public class Floor : Structure
     {
-        public static int count = 0;
-        public Unit(String PATH, Vector2 POS, Vector2 DIMS) : base(PATH, POS, DIMS)
+        public Floor(String PATH, Vector2 POS, Vector2 DIMS) : base(PATH, POS, DIMS)
         {
 
         }
 
-        public override void Update()
+        public override void Update(GameTime gameTime)
         {
-           
 
-            base.Update();
+            base.Update(gameTime);
         }
 
         public override void Draw()

@@ -15,7 +15,7 @@ namespace Projectile
 
         public Wizard(String PATH, Vector2 POS, Vector2 DIMS) : base(PATH, POS, DIMS)
         {
-            arrow = new Arrow("shooter/arrow", new Vector2(pos.X - 20, pos.Y), new Vector2(40, 40), false, this);
+            arrow = new Arrow("shooter/arrow", new Vector2(pos.X + 20, pos.Y), new Vector2(40, 40), false, this);
             CurrentState = PlayerState.Idle;
         }
 
@@ -45,7 +45,7 @@ namespace Projectile
                     if (!checkAim())
                     {
                         CurrentState = PlayerState.Aiming;
-                        arrow.pos = new Vector2(pos.X + 60, pos.Y);
+                        arrow.pos = new Vector2(pos.X - 90, pos.Y);
                     }
                     else
                     {

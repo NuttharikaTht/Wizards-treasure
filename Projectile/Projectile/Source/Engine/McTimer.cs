@@ -14,7 +14,7 @@ namespace Projectile
         public bool goodToGo;
         protected int mSec;
         protected TimeSpan timer = new TimeSpan();
-        
+
 
         public McTimer(int m)
         {
@@ -37,11 +37,14 @@ namespace Projectile
             get { return (int)timer.TotalMilliseconds; }
         }
 
-        
+
 
         public void UpdateTimer()
         {
-            timer += Globals.gameTime.ElapsedGameTime;
+            if (timer != null)
+            {
+                timer = Globals.gameTime.ElapsedGameTime;
+            }
         }
 
         public void UpdateTimer(float SPEED)
@@ -56,7 +59,7 @@ namespace Projectile
 
         public bool Test()
         {
-            if(timer.TotalMilliseconds >= mSec || goodToGo)
+            if (timer.TotalMilliseconds >= mSec || goodToGo)
             {
                 return true;
             }
@@ -68,8 +71,8 @@ namespace Projectile
 
         public void Reset()
         {
-            timer = timer.Subtract(new TimeSpan(0, 0, mSec/60000, mSec/1000, mSec%1000));
-            if(timer.TotalMilliseconds < 0)
+            timer = timer.Subtract(new TimeSpan(0, 0, mSec / 60000, mSec / 1000, mSec % 1000));
+            if (timer.TotalMilliseconds < 0)
             {
                 timer = TimeSpan.Zero;
             }
@@ -91,7 +94,7 @@ namespace Projectile
 
         public virtual XElement ReturnXML()
         {
-            XElement xml= new XElement("Timer",
+            XElement xml = new XElement("Timer",
                                     new XElement("mSec", mSec),
                                     new XElement("timer", Timer));
 

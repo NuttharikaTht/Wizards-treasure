@@ -1,35 +1,39 @@
 ﻿<Properties StartupConfiguration="{2AC6D68A-6993-428A-8159-013AB0C9BA28}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Projectile/Source/Engine/Player.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Projectile/Source/Engine/Slots.cs">
     <Files>
-      <File FileName="Projectile/Source/Gameplay/World/Arrow.cs" Line="31" Column="18" />
-      <File FileName="Projectile/Source/Gameplay/World.cs" />
-      <File FileName="Projectile/Source/Gameplay/World/Player/Thief.cs" />
-      <File FileName="Projectile/Source/Engine/Player.cs" Line="66" Column="1" />
-      <File FileName="Projectile/Source/Gameplay/World/Units/Object.cs" />
-      <File FileName="Projectile/Source/Gameplay/World/Unit.cs" />
-      <File FileName="Projectile/Source/Gameplay/World/Projectile/obj.cs" />
-      <File FileName="Projectile/Source/Gameplay/World/Projectile/Projectile2D.cs" />
-      <File FileName="Projectile/Source/Gameplay/World/Player/Wizard.cs" />
+      <File FileName="Projectile/Source/Gameplay/World.cs" Line="37" Column="19" />
+      <File FileName="Projectile/Source/Gameplay/World/Projectile/Projectile2D.cs" Line="83" Column="1" />
+      <File FileName="Projectile/Source/Gameplay/World/Projectile/obj.cs" Line="39" Column="1" />
+      <File FileName="Projectile/Source/Gameplay/World/Arrow.cs" Line="30" Column="47" />
+      <File FileName="Projectile/Source/Gameplay/World/Player/Wizard.cs" Line="48" Column="59" />
+      <File FileName="Projectile/Source/Gameplay/World/Player/Thief.cs" Line="54" Column="22" />
+      <File FileName="Projectile/Content/fonts/Minecraft.spritefont" Line="20" Column="13" />
+      <File FileName="Projectile/Source/Engine/Slots.cs" Line="89" Column="14" />
+      <File FileName="Projectile/Source/Engine/Globals.cs" Line="48" Column="1" />
+      <File FileName="Projectile/Source/Gameplay/World/Wall/Dirt.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Projectile" expanded="True">
-            <Node name="Projectile" expanded="True" selected="True">
+            <Node name="Projectile" expanded="True">
               <Node name="Content" expanded="True">
                 <Node name="fonts" expanded="True" />
                 <Node name="textures" expanded="True" />
               </Node>
               <Node name="Source" expanded="True">
-                <Node name="Engine" expanded="True" />
+                <Node name="Engine" expanded="True">
+                  <Node name="Slots.cs" selected="True" />
+                </Node>
                 <Node name="Gameplay" expanded="True">
                   <Node name="World" expanded="True">
                     <Node name="Player" expanded="True" />
                     <Node name="Projectile" expanded="True" />
-                    <Node name="Units" expanded="True" />
+                    <Node name="Wall" expanded="True" />
                   </Node>
                 </Node>
               </Node>
+              <Node name="States" expanded="True" />
             </Node>
           </Node>
         </State>

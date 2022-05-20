@@ -53,7 +53,7 @@ namespace Projectile
                     if (!checkAim())
                     {
                         CurrentState = PlayerState.Aiming;
-                        arrow.pos = new Vector2(pos.X + 60, pos.Y);
+                        arrow.pos = new Vector2(pos.X + 90, pos.Y);
                     }
                     else
                     {

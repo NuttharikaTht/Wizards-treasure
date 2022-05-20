@@ -6,6 +6,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Projectile.Source.Engine;
 
 namespace Projectile
 {
@@ -22,6 +23,8 @@ namespace Projectile
     public class Globals
     {
         public static int screenWidth, screenHeight;
+        public static float timer;
+
         static int power = 0;
         public static int Power
         {
@@ -35,6 +38,7 @@ namespace Projectile
             get { return currentPlayer; }
             set { currentPlayer = value; }
         }
+        public static Slots[] slots = new Slots[26]; 
 
         public static ContentManager content;
         public static SpriteBatch spriteBatch;
@@ -43,6 +47,10 @@ namespace Projectile
         public static McMouseControl mouse;
 
         public static GameTime gameTime;
+
+        public static void ResetTimer() {
+            timer = 30;
+        }
 
         public static float GetDistance(Vector2 pos, Vector2 target)
         {
