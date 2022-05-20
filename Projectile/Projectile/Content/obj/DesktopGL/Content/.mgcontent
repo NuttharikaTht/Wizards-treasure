@@ -5,13 +5,17 @@
   <Config />
   <SourceFiles>
     <File>/Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/Content/fonts/Minecraft.spritefont</File>
-    <File>/Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/Content/textures/background.png</File>
-    <File>/Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/Content/textures/thief.png</File>
-    <File>/Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/Content/arrow.png</File>
-    <File>/Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/Content/titan.png</File>
-    <File>/Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/Content/aiming.png</File>
+    <File>/Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/Content/fonts/Minecraft_24.spritefont</File>
+    <File>/Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/Content/screen/home_screen/bg.png</File>
+    <File>/Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/Content/textures/player/thief.png</File>
+    <File>/Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/Content/textures/player/wizard.png</File>
+    <File>/Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/Content/textures/shooter/arrow.png</File>
+    <File>/Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/Content/textures/ammo/thief/titan.png</File>
+    <File>/Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/Content/textures/shooter/aiming.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

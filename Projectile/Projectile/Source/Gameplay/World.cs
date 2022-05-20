@@ -12,16 +12,23 @@ namespace Projectile
     public class World
     {
         public Thief thief;
+        public Wizard wizard;
         public Arrow arrow;
 
         public Vector2 offset;
         public List<Projectile2D> projectiles = new List<Projectile2D>();
 
+        public SpriteFont engFonts, thaiFont;
+
         public World()
         {
 
-            thief = new Thief("thief", new Vector2(20, 400), new Vector2(40, 40));
-            //if(thief != null) arrow = new Arrow("arrow", new Vector2 (thief.pos.X+20, thief.pos.Y), new Vector2(40, 40));
+            engFonts = Globals.content.Load<SpriteFont>("fonts/Minecraft_24");
+
+
+            Globals.CurrentPlayer = WhoPlay.Thief;
+            thief = new Thief("player/thief", new Vector2(20, 400), new Vector2(40, 40));
+            wizard = new Wizard("player/wizard", new Vector2(1200, 400), new Vector2(40, 40));
 
             //set PaddProjectile to AddProjectile Func
             GameGlobals.PassProjectile = AddProjectile;
@@ -29,12 +36,26 @@ namespace Projectile
 
         public virtual void Update(GameTime gameTime)
         {
-            thief.Update(gameTime);
-            if (thief.checkAim()) {
-                thief.arrow.Update(gameTime);
+            if (Globals.CurrentPlayer == WhoPlay.Thief)
+            {
+                thief.Update(gameTime);
+                if (thief.checkAim())
+                {
+                    thief.arrow.Update(gameTime);
+                }
+            }
+            else
+            {
+                wizard.Update(gameTime);
+                if (wizard.checkAim())
+                {
+                    wizard.arrow.Update(gameTime);
+                }
             }
 
-            for (int i=0; i<projectiles.Count; i++)
+
+
+            for (int i = 0; i < projectiles.Count; i++)
             {
                 projectiles[i].Update(gameTime, offset, null);
 
@@ -54,8 +75,26 @@ namespace Projectile
         public virtual void Draw(Vector2 OFFSET)
         {
             thief.Draw(OFFSET);
-            if (thief.checkAim()) {
+            wizard.Draw(OFFSET);
+
+            if (Globals.CurrentPlayer == WhoPlay.Thief)
+            {
+                Globals.spriteBatch.DrawString(engFonts, "Thief's Turn", new Vector2(940, 40), Color.Yellow);
+            }
+            else
+            {
+                Globals.spriteBatch.DrawString(engFonts, "Wizard's Turn", new Vector2(940, 40), Color.Yellow);
+            }
+
+
+            if (thief.checkAim())
+            {
                 thief.arrow.Draw(OFFSET);
+            }
+
+            if (wizard.checkAim())
+            {
+                wizard.arrow.Draw(OFFSET);
             }
 
             for (int i = 0; i < projectiles.Count; i++)

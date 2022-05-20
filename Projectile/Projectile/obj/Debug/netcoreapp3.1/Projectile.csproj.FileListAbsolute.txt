@@ -29,21 +29,16 @@
 /Users/aomms/comgame/Projectile/Projectile/bin/Debug/netcoreapp3.1/Content/arrow.xnb
 /Users/aomms/comgame/Projectile/Projectile/bin/Debug/netcoreapp3.1/Content/aiming.xnb
 /Users/aomms/comgame/Projectile/Projectile/bin/Debug/netcoreapp3.1/Content/titan.xnb
-/Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/obj/Debug/netcoreapp3.1/Projectile.dll
-/Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/obj/Debug/netcoreapp3.1/Projectile.pdb
-/Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/obj/Debug/netcoreapp3.1/Projectile.csproj.AssemblyReference.cache
-/Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/obj/Debug/netcoreapp3.1/Projectile.GeneratedMSBuildEditorConfig.editorconfig
-/Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/obj/Debug/netcoreapp3.1/Projectile.AssemblyInfoInputs.cache
-/Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/obj/Debug/netcoreapp3.1/Projectile.AssemblyInfo.cs
-/Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/obj/Debug/netcoreapp3.1/Projectile.csproj.CoreCompileInputs.cache
 /Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/bin/Debug/netcoreapp3.1/Content/background.xnb
+/Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/bin/Debug/netcoreapp3.1/Content/fonts/Minecraft.xnb
+/Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/bin/Debug/netcoreapp3.1/Content/fonts/Minecraft_24.xnb
+/Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/bin/Debug/netcoreapp3.1/Content/screen/home_screen/bg.xnb
+/Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/bin/Debug/netcoreapp3.1/Content/textures/ammo/thief/titan.xnb
+/Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/bin/Debug/netcoreapp3.1/Content/textures/player/thief.xnb
+/Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/bin/Debug/netcoreapp3.1/Content/textures/player/wizard.xnb
+/Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/bin/Debug/netcoreapp3.1/Content/textures/shooter/aiming.xnb
+/Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/bin/Debug/netcoreapp3.1/Content/textures/shooter/arrow.xnb
 /Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/bin/Debug/netcoreapp3.1/Content/thief.xnb
-/Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/bin/Debug/netcoreapp3.1/Content/textures/Background.png
-/Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/bin/Debug/netcoreapp3.1/Content/aiming.xnb
-/Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/bin/Debug/netcoreapp3.1/Content/arrow.xnb
-/Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/bin/Debug/netcoreapp3.1/Content/textures/background.xnb
-/Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/bin/Debug/netcoreapp3.1/Content/textures/thief.xnb
-/Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/bin/Debug/netcoreapp3.1/Content/titan.xnb
 /Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/bin/Debug/netcoreapp3.1/Projectile.deps.json
 /Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/bin/Debug/netcoreapp3.1/Projectile.runtimeconfig.json
 /Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/bin/Debug/netcoreapp3.1/Projectile.runtimeconfig.dev.json
@@ -58,6 +53,11 @@
 /Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/bin/Debug/netcoreapp3.1/runtimes/win-x64/native/soft_oal.dll
 /Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/bin/Debug/netcoreapp3.1/runtimes/win-x86/native/SDL2.dll
 /Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/bin/Debug/netcoreapp3.1/runtimes/win-x86/native/soft_oal.dll
+/Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/obj/Debug/netcoreapp3.1/Projectile.GeneratedMSBuildEditorConfig.editorconfig
+/Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/obj/Debug/netcoreapp3.1/Projectile.AssemblyInfoInputs.cache
+/Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/obj/Debug/netcoreapp3.1/Projectile.AssemblyInfo.cs
+/Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/obj/Debug/netcoreapp3.1/Projectile.csproj.CoreCompileInputs.cache
 /Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/obj/Debug/netcoreapp3.1/Projectile.csproj.CopyComplete
+/Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/obj/Debug/netcoreapp3.1/Projectile.dll
+/Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/obj/Debug/netcoreapp3.1/Projectile.pdb
 /Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/obj/Debug/netcoreapp3.1/Projectile.genruntimeconfig.cache
-/Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/bin/Debug/netcoreapp3.1/Content/fonts/Minecraft.xnb

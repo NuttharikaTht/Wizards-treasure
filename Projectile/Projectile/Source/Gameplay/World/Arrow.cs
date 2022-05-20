@@ -12,10 +12,12 @@ namespace Projectile
     public class Arrow : Unit
     {
         public float speed;
+        public Player owner;
 
-        public Arrow(String PATH, Vector2 POS, Vector2 DIMS, bool ISTHIEF) : base(PATH, POS, DIMS, ISTHIEF)
+        public Arrow(String PATH, Vector2 POS, Vector2 DIMS, bool ISTHIEF, Player OWNER) : base(PATH, POS, DIMS, ISTHIEF)
         {
             speed = 2.0f;
+            owner = OWNER;
         }
 
         public override void Update(GameTime gameTime)
@@ -23,10 +25,12 @@ namespace Projectile
 
             rot = Globals.RotateTowards(pos, new Vector2(Globals.mouse.newMouse.X, Globals.mouse.newMouse.Y));
 
-            if (0 <= rot && rot <= 180){
+            if (0 <= rot && rot <= 180)
+            {
                 if (Globals.mouse.LeftClick())
                 {
-                    GameGlobals.PassProjectile(new obj("titan", new Vector2(pos.X, pos.Y), this, new Vector2(Globals.mouse.newMousePos.X, Globals.mouse.newMousePos.Y), new Vector2(10, 10)));
+                    owner.Firing();
+                    GameGlobals.PassProjectile(new obj("ammo/thief/titan", new Vector2(pos.X, pos.Y), this, new Vector2(Globals.mouse.newMousePos.X, Globals.mouse.newMousePos.Y), new Vector2(10, 10)));
                 }
             }
 

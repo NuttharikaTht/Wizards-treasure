@@ -12,6 +12,13 @@ namespace Projectile
     public delegate void passObject(object i);
     public delegate void passObjectAndeReturn(object i);
 
+    [Flags]
+    public enum WhoPlay
+    {
+        Thief,
+        Wizard,
+    }
+
     public class Globals
     {
         public static int screenWidth, screenHeight;
@@ -20,6 +27,13 @@ namespace Projectile
         {
             get { return power; }
             set { if (value >= 0 && value <= 100) power = value; }
+        }
+
+        static WhoPlay currentPlayer;
+        public static WhoPlay CurrentPlayer
+        {
+            get { return currentPlayer; }
+            set { currentPlayer = value; }
         }
 
         public static ContentManager content;

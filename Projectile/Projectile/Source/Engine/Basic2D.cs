@@ -24,7 +24,7 @@ namespace Projectile
             pos = POS;
             dims = DIMS;
             
-            model = Globals.content.Load<Texture2D>(PATH);
+            model = Globals.content.Load<Texture2D>("textures/"+PATH);
 
         }
 

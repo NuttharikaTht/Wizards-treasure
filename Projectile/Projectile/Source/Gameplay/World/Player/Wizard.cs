@@ -9,13 +9,13 @@ using Microsoft.Xna.Framework.Input;
 
 namespace Projectile
 {
-    public class Thief : Player
+    public class Wizard : Player
     {
         public Arrow arrow;
 
-        public Thief(String PATH, Vector2 POS, Vector2 DIMS) : base(PATH, POS, DIMS)
+        public Wizard(String PATH, Vector2 POS, Vector2 DIMS) : base(PATH, POS, DIMS)
         {
-            arrow = new Arrow("shooter/arrow", new Vector2(pos.X + 20, pos.Y), new Vector2(40, 40), true, this);
+            arrow = new Arrow("shooter/arrow", new Vector2(pos.X - 20, pos.Y), new Vector2(40, 40), false, this);
             CurrentState = PlayerState.Idle;
         }
 
@@ -24,15 +24,7 @@ namespace Projectile
             elapsed += (float)gameTime.ElapsedGameTime.TotalSeconds;
             if (!checkAim())
             {
-                if (Globals.keyboard.GetPress("A"))
-                {
-                    pos = new Vector2(pos.X - 4, pos.Y);
-                }
-
-                if (Globals.keyboard.GetPress("D"))
-                {
-                    pos = new Vector2(pos.X + 4, pos.Y);
-                }
+                
             }
             else
             {
@@ -58,6 +50,7 @@ namespace Projectile
                     else
                     {
                         CurrentState = PlayerState.Running;
+                        arrow.pos = new Vector2(0, 0);
                     }
                 }
                 elapsed = 0f;

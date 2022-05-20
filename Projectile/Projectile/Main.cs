@@ -49,7 +49,7 @@ namespace Projectile
             Globals.content = this.Content;
             Globals.spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            cursur = new Basic2D("aiming", new Vector2(0, 0), new Vector2(40, 40));
+            cursur = new Basic2D("shooter/aiming", new Vector2(0, 0), new Vector2(40, 40));
 
             Globals.keyboard = new McKeyboard();
             Globals.mouse = new McMouseControl();

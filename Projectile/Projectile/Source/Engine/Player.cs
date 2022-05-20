@@ -46,7 +46,7 @@ namespace Projectile
             pos = POS;
             dims = DIMS;
 
-            model = Globals.content.Load<Texture2D>(PATH);
+            model = Globals.content.Load<Texture2D>("textures/" + PATH);
             engFonts = Globals.content.Load<SpriteFont>("fonts/Minecraft");
         }
 
@@ -54,6 +54,13 @@ namespace Projectile
         {
             return currentState == PlayerState.Aiming;
         }
+
+        public virtual void Firing()
+        {
+            CurrentState = PlayerState.Firing;
+            Globals.CurrentPlayer = Globals.CurrentPlayer == WhoPlay.Thief ? WhoPlay.Wizard : WhoPlay.Thief;
+        }
+
         public virtual void Update(GameTime gameTime)
         {
 
@@ -63,7 +70,10 @@ namespace Projectile
         {
             if (model != null)
             {
-                Globals.spriteBatch.DrawString(engFonts, Globals.Power.ToString() + " %", new Vector2(pos.X - 10, pos.Y + 30), Color.White);
+                if (checkAim())
+                {
+                    Globals.spriteBatch.DrawString(engFonts, Globals.Power.ToString() + " %", new Vector2(pos.X - 10, pos.Y + 30), Color.White);
+                }
                 Globals.spriteBatch.Draw(model, new Rectangle((int)(pos.X + OFFSET.X), (int)(pos.Y + OFFSET.Y), (int)dims.X, (int)dims.Y), null, Color.White, rot,
                     new Vector2(model.Bounds.Width / 2, model.Bounds.Height / 2), new SpriteEffects(), 0); ;
             }
