@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "SHpq17H77Wl4SjEqRvQabO9eQV1Ditt9mrKjVGcJ702C2Qe/mIkGJb1z+Nf4WLevAHOIgQ5Ir+Q3g9SRLg/OfQ==",
+  "dgSpecHash": "gimeXu7/gkXD76upjHfhbxub2dXXFMg/2Tfn3MB2mWNL9ExKqrNUQO5gehXzUGMGNMtmqQPf6VKsLhaRNydOHQ==",
   "success": true,
-  "projectFilePath": "/Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/Projectile.csproj",
+  "projectFilePath": "C:\\Users\\praph\\Desktop\\ComGame\\Wizards-treasure\\Projectile\\Projectile\\Projectile.csproj",
   "expectedPackageFiles": [
-    "/Users/nirattisai/.nuget/packages/monogame.content.builder.task/3.8.0.1641/monogame.content.builder.task.3.8.0.1641.nupkg.sha512",
-    "/Users/nirattisai/.nuget/packages/monogame.framework.desktopgl/3.8.0.1641/monogame.framework.desktopgl.3.8.0.1641.nupkg.sha512"
+    "C:\\Users\\praph\\.nuget\\packages\\monogame.content.builder.task\\3.8.0.1641\\monogame.content.builder.task.3.8.0.1641.nupkg.sha512",
+    "C:\\Users\\praph\\.nuget\\packages\\monogame.framework.desktopgl\\3.8.0.1641\\monogame.framework.desktopgl.3.8.0.1641.nupkg.sha512"
   ],
   "logs": []
 }

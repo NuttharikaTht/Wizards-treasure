@@ -8,17 +8,28 @@ using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
+using Projectile.States;
+
 namespace Projectile
 {
     public class Main : Game
     {
         private GraphicsDeviceManager graphics;
-        private SpriteBatch _spriteBatch;
+        private SpriteBatch _spriteBatch; 
 
 
         World world;
 
         Basic2D cursur;
+
+        private State _currentState;
+
+        private State _nextState;
+
+        public void ChangeState(State state)
+        {
+            _nextState = state;
+        }
 
         public Main()
         {
@@ -49,12 +60,14 @@ namespace Projectile
             Globals.content = this.Content;
             Globals.spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            cursur = new Basic2D("shooter/aiming", new Vector2(0, 0), new Vector2(40, 40));
+           /* cursur = new Basic2D("shooter/aiming", new Vector2(0, 0), new Vector2(40, 40));
 
             Globals.keyboard = new McKeyboard();
             Globals.mouse = new McMouseControl();
 
-            world = new World();
+            world = new World();*/
+
+            _currentState = new MenuState(this, graphics.GraphicsDevice, Content);
             // TODO: use this.Content to load your game content here
         }
 
@@ -63,7 +76,7 @@ namespace Projectile
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
-            Globals.gameTime = gameTime;
+     /*       Globals.gameTime = gameTime;
             Globals.keyboard.Update();
             Globals.mouse.Update();
 
@@ -71,7 +84,16 @@ namespace Projectile
 
             //Update key that've been pressed
             Globals.keyboard.UpdateOld();
-            Globals.mouse.UpdateOld();
+            Globals.mouse.UpdateOld();  */
+
+            if (_nextState != null)
+            {
+                _currentState = _nextState;
+
+                _nextState = null;
+            } 
+
+            _currentState.Update(gameTime);
 
             base.Update(gameTime);
         }
@@ -82,15 +104,17 @@ namespace Projectile
 
             // TODO: Add your drawing code here
 
-            Globals.spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend);
+       /*     Globals.spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend);
 
             world.Draw(Vector2.Zero);
 
             if (world.thief.checkAim()) {
                 cursur.Draw(new Vector2(Globals.mouse.newMousePos.X, Globals.mouse.newMousePos.Y), new Vector2(0, 0));
-            }
+            } */
 
-            Globals.spriteBatch.End();
+            _currentState.Draw(gameTime, _spriteBatch);
+
+          //  Globals.spriteBatch.End();
 
             base.Draw(gameTime);
         }

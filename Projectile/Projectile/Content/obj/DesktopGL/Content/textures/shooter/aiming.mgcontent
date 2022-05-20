@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>/Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/Content/textures/shooter/aiming.png</SourceFile>
-  <SourceTime>2022-05-20T00:35:31.1959076+07:00</SourceTime>
-  <DestFile>/Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/Content/bin/DesktopGL/Content/textures/shooter/aiming.xnb</DestFile>
-  <DestTime>2022-05-20T14:35:15.2448211+07:00</DestTime>
+  <SourceFile>C:/Users/praph/Desktop/ComGame/Wizards-treasure/Projectile/Projectile/Content/textures/shooter/aiming.png</SourceFile>
+  <SourceTime>2022-05-20T15:51:48.945022+07:00</SourceTime>
+  <DestFile>C:/Users/praph/Desktop/ComGame/Wizards-treasure/Projectile/Projectile/Content/bin/DesktopGL/Content/textures/shooter/aiming.xnb</DestFile>
+  <DestTime>2022-05-20T15:52:24.1044378+07:00</DestTime>
   <Importer>TextureImporter</Importer>
-  <ImporterTime>2020-08-10T16:17:54+07:00</ImporterTime>
+  <ImporterTime>2020-08-10T23:17:54+07:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
-  <ProcessorTime>2020-08-10T16:17:54+07:00</ProcessorTime>
+  <ProcessorTime>2020-08-10T23:17:54+07:00</ProcessorTime>
   <Parameters>
     <Key>ColorKeyColor</Key>
     <Value>255,0,255,255</Value>
