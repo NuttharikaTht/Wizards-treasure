@@ -47,6 +47,8 @@ namespace Projectile
 
         public static GameTime gameTime;
 
+        public static SoundControl soundControl;
+
         public static void ResetTimer() {
             timer = 30;
         }

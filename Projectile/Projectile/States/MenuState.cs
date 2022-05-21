@@ -19,7 +19,6 @@ namespace Projectile.States
         Texture2D bg_menu;
         Texture2D logo;
 
-        Song song;
 
         public MenuState(Main game, GraphicsDevice graphicsDevice, ContentManager content)
           : base(game, graphicsDevice, content)
@@ -27,8 +26,7 @@ namespace Projectile.States
             bg_menu = _content.Load<Texture2D>("MenuState/bg_menu");
             logo = _content.Load<Texture2D>("MenuState/newlogo");
 
-            song = _content.Load<Song>("Sound/sound");
-            MediaPlayer.Play(song);
+            Globals.soundControl = new SoundControl("Sound/sound");
 
             var bt_start = _content.Load<Texture2D>("MenuState/bt_start");
             var bt_exit = _content.Load<Texture2D>("MenuState/bt_exit");
