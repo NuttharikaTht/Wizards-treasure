@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>/Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/Content/textures/ammo/thief/titan.png</SourceFile>
-  <SourceTime>2022-05-20T00:35:31.2154197+07:00</SourceTime>
-  <DestFile>/Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/Content/bin/DesktopGL/Content/textures/ammo/thief/titan.xnb</DestFile>
-  <DestTime>2022-05-20T18:14:42.9326933+07:00</DestTime>
+  <SourceFile>/Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/Content/textures/ammo/thief/Titan.png</SourceFile>
+  <SourceTime>2022-05-21T18:07:10.0627125+07:00</SourceTime>
+  <DestFile>/Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/Content/bin/DesktopGL/Content/textures/ammo/thief/Titan.xnb</DestFile>
+  <DestTime>2022-05-21T18:16:35.7622824+07:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2020-08-10T16:17:54+07:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

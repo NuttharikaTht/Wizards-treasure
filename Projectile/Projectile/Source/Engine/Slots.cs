@@ -58,16 +58,16 @@ namespace Projectile
                 case WallType.Fire: type = "fire"; break;
             }
         }
-        private void LoadType(WallType TYPE)
-        {
-            switch (TYPE)
-            {
-                case WallType.Dirt: type = "dirt"; break;
-                case WallType.Water: type = "water"; break;
-                case WallType.Wind: type = "wind"; break;
-                case WallType.Fire: type = "fire"; break;
-            }
-        }
+        //private void LoadType(WallType TYPE)
+        //{
+        //    switch (TYPE)
+        //    {
+        //        case WallType.Dirt: type = "dirt"; break;
+        //        case WallType.Water: type = "water"; break;
+        //        case WallType.Wind: type = "wind"; break;
+        //        case WallType.Fire: type = "fire"; break;
+        //    }
+        //}
         public void LoadModel(SlotsState STATE)
         {
             state = STATE;
@@ -85,21 +85,21 @@ namespace Projectile
                     break;
                 case SlotsState.Wall2:
                     dims = new Vector2(40, 90);
-                    pos.Y -= 20;
+                    pos.Y = 547;
                     model = Globals.content.Load<Texture2D>("textures/wall/" + type + "/lv2");
                     break;
                 case SlotsState.Wall3:
                     dims = new Vector2(40, 180);
-                    pos.Y -= 70;
+                    pos.Y = 502;
                     model = Globals.content.Load<Texture2D>("textures/wall/" + type + "/lv3");
                     break;
                 case SlotsState.Wall4:
                     dims = new Vector2(40, 300);
-                    pos.Y -= 130;
+                    pos.Y = 442;
                     model = Globals.content.Load<Texture2D>("textures/wall/" + type + "/lv4");
                     break;
                 case SlotsState.Wall5:
-                    pos.Y -= 205;
+                    pos.Y = 367;
                     dims = new Vector2(40, 450);
                     model = Globals.content.Load<Texture2D>("textures/wall/" + type + "/lv5");
                     break;
@@ -163,12 +163,11 @@ namespace Projectile
                     break;
             }
         }
-        public void MergeWall(int index)
+        public void MergeWall(int INDEX)
         {
-            LoadType(Globals.slots[index].Element);
-            UpLevel(Globals.slots[index].CurrentState);
-            Globals.slots[index].CurrentState = SlotsState.Walk;
-            Globals.slots[index].Element = WallType.Non;
+            Console.WriteLine(Globals.slots[INDEX].CurrentState);
+            Globals.slots[INDEX].UpLevel(Globals.slots[INDEX].CurrentState);
+            Console.WriteLine(Globals.slots[INDEX].CurrentState);
         }
         public void CheckArea(WallType wall)
         {
@@ -179,7 +178,7 @@ namespace Projectile
             }
             else
             {
-                AddWall(index, wall);
+
                 int Left = index - areaSize, Right = index + areaSize;
                 if (0 <= Left && Right < 26)
                 {
@@ -193,7 +192,29 @@ namespace Projectile
                         Console.WriteLine("Detect Right");
                         MergeWall(Right);
                     }
+                    else { AddWall(index, wall); }
                 }
+                else
+                {
+                    if (Left < 0)
+                    {
+                        if (Globals.slots[Right].Element == wall)
+                        {
+                            Console.WriteLine("Detect Left");
+                            MergeWall(Right);
+                        }
+                    }
+                    else if (Right < 26)
+                    {
+                        if (Globals.slots[Left].Element == wall)
+                        {
+                            Console.WriteLine("Detect Left");
+                            MergeWall(Left);
+                        }
+                    }
+                    else { AddWall(index, wall); }
+                }
+
             }
 
         }

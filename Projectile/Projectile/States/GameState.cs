@@ -105,6 +105,10 @@ namespace Projectile.States
             {
                 cursur.Draw(new Vector2(Globals.mouse.newMousePos.X, Globals.mouse.newMousePos.Y), new Vector2(0, 0));
             }
+            if (world.wizard.checkAim())
+            {
+                cursur.Draw(new Vector2(Globals.mouse.newMousePos.X, Globals.mouse.newMousePos.Y), new Vector2(0, 0));
+            }
 
             //draw game pause
             if (pause== true)

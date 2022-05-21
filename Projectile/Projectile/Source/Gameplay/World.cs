@@ -17,6 +17,8 @@ namespace Projectile
         public Arrow arrow;
 
         public static Floor floor;
+        public static Treasure treasure;
+
         public Vector2 offset;
         public List<Projectile2D> projectiles = new List<Projectile2D>();
 
@@ -32,7 +34,7 @@ namespace Projectile
             {
                 Globals.slots[i] = new Slots(new Vector2(80 + (40 * i), 572), i);
                 {
-                    Globals.slots[i].CurrentState =SlotsState.Walk;
+                    Globals.slots[i].CurrentState = SlotsState.Walk;
                 };
             }
             Globals.slots[11] = new Dirt(new Vector2(520, 572), 11)
@@ -41,15 +43,17 @@ namespace Projectile
             };
             Globals.slots[13] = new Dirt(new Vector2(600, 572), 13)
             {
-                CurrentState = SlotsState.Wall5
+                CurrentState = SlotsState.Wall3
             };
 
             Globals.CurrentPlayer = WhoPlay.Thief;
-            thief = new Thief("player/thief", new Vector2(40, 542), new Vector2(90, 90));
+            thief = new Thief("player/thief", new Vector2(40, 542), new Vector2(90, 90), 500);
             wizard = new Wizard("player/wizard", new Vector2(1180, 542), new Vector2(90, 90));
 
+            treasure = new Treasure("treasure", new Vector2(wizard.pos.X - 40, wizard.pos.Y), new Vector2(40, 40));
+
             //set PaddProjectile to AddProjectile Func
-            GameGlobals.PassProjectile = AddProjectile; 
+            GameGlobals.PassProjectile = AddProjectile;
         }
 
         public virtual void Update(GameTime gameTime)
@@ -79,29 +83,22 @@ namespace Projectile
                     // x = slot that projectile hit
                     float x = (projectiles[0].pos.X - 80) / 40;
                     int index = (int)MathF.Round(x, MidpointRounding.AwayFromZero);
+                    if (Globals.CurrentPlayer == WhoPlay.Thief)
+                    {
+                        // add wall in slot index x
+                        Globals.slots[index].Update(gameTime, WallType.Dirt);
+                    }
 
-                    // add wall in slot index x
-                    Globals.slots[index].Update(gameTime, WallType.Dirt);
                     projectiles.RemoveAt(0);
                 }
             }
-            
-        }
 
-        //private void AddWall(int index)
-        //{
-        //    Globals.slots[index] = new Dirt(new Vector2(80 + (40 * index), 572), index)
-        //    {
-        //        CurrentState = SlotsState.Wall1
-        //    };
-            
-        //}
+        }
 
 
         public virtual void AddProjectile(object INFO)
         {
             projectiles.Add((Projectile2D)INFO);
-            //projectile = (Projectile2D)INFO;
         }
 
         public virtual void Draw(Vector2 OFFSET)
