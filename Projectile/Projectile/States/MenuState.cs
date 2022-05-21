@@ -26,7 +26,7 @@ namespace Projectile.States
             bg_menu = _content.Load<Texture2D>("MenuState/bg_menu");
             logo = _content.Load<Texture2D>("MenuState/newlogo");
 
-            Globals.soundControl = new SoundControl("Sound/sound");
+            
 
             var bt_start = _content.Load<Texture2D>("MenuState/bt_start");
             var bt_exit = _content.Load<Texture2D>("MenuState/bt_exit");

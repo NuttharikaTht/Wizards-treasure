@@ -60,12 +60,14 @@ namespace Projectile
             Globals.content = this.Content;
             Globals.spriteBatch = new SpriteBatch(GraphicsDevice);
 
-           /* cursur = new Basic2D("shooter/aiming", new Vector2(0, 0), new Vector2(40, 40));
+            Globals.soundControl = new SoundControl("Sound/sound");
 
-            Globals.keyboard = new McKeyboard();
-            Globals.mouse = new McMouseControl();
+            /* cursur = new Basic2D("shooter/aiming", new Vector2(0, 0), new Vector2(40, 40));
 
-            world = new World();*/
+             Globals.keyboard = new McKeyboard();
+             Globals.mouse = new McMouseControl();
+
+             world = new World();*/
 
             _currentState = new MenuState(this, graphics.GraphicsDevice, Content);
             // TODO: use this.Content to load your game content here

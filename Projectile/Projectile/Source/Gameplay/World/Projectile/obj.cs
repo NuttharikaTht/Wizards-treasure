@@ -11,8 +11,8 @@ namespace Projectile
 {
     public class obj : Projectile2D
     {
-
-        public obj(String PATH, Vector2 POS, Unit OWNER, Vector2 TARGET, Vector2 Velocity)
+        public String type;
+        public obj(String PATH, Vector2 POS, Unit OWNER, Vector2 TARGET, Vector2 Velocity, String TYPE)
             : base(PATH, POS, new Vector2(40, 40), OWNER, TARGET)
         {
 
@@ -21,6 +21,7 @@ namespace Projectile
             acceleration = new Vector2(0, -9.8f);
             isHit = false;
             isDone = false;
+            type = TYPE;
             //done = false;
         }
 

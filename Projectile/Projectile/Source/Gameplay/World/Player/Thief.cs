@@ -23,7 +23,7 @@ namespace Projectile
         {
             arrow = new Arrow("shooter/arrow", new Vector2(pos.X + 20, pos.Y), new Vector2(40, 40), true, this);
             staminaTexture = Globals.content.Load<Texture2D>("textures/stamina");
-            CurrentState = PlayerState.Idle;
+            CurrentState = PlayerState.Running;
 
             stamina = newStamina;
         }
@@ -35,18 +35,21 @@ namespace Projectile
             elapsed += (float)gameTime.ElapsedGameTime.TotalSeconds;
             if (!checkAim())
             {
-                if (Globals.keyboard.GetPress("A"))
+                if(CurrentState == PlayerState.Running)
                 {
-                    pos = new Vector2(pos.X - 4, pos.Y);
-                    //stamina -= 1;
-                    staminaUsage += 1;
-                }
+                    if (Globals.keyboard.GetPress("A"))
+                    {
+                        pos = new Vector2(pos.X - 4, pos.Y);
+                        //stamina -= 1;
+                        staminaUsage += 1;
+                    }
 
-                if (Globals.keyboard.GetPress("D"))
-                {
-                    pos = new Vector2(pos.X + 4, pos.Y);
-                    //stamina -= 1;
-                    staminaUsage += 1;
+                    if (Globals.keyboard.GetPress("D"))
+                    {
+                        pos = new Vector2(pos.X + 4, pos.Y);
+                        //stamina -= 1;
+                        staminaUsage += 1;
+                    }
                 }
             }
             else
@@ -67,7 +70,7 @@ namespace Projectile
 
             if (elapsed > 0.1f)
             {
-                if (Globals.keyboard.GetPress("Space"))
+                if (Globals.keyboard.GetPress("Space")) 
                 {
                     if (!checkAim())
                     {

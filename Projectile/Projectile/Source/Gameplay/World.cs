@@ -20,7 +20,7 @@ namespace Projectile
         public static Treasure treasure;
 
         public Vector2 offset;
-        public List<Projectile2D> projectiles = new List<Projectile2D>();
+        public List<obj> projectiles = new List<obj>();
 
         public SpriteFont engFonts, thaiFont;
 
@@ -83,22 +83,36 @@ namespace Projectile
                     // x = slot that projectile hit
                     float x = (projectiles[0].pos.X - 80) / 40;
                     int index = (int)MathF.Round(x, MidpointRounding.AwayFromZero);
-                    if (Globals.CurrentPlayer == WhoPlay.Thief)
+                    Console.WriteLine(projectiles[0].type);
+                    if (Globals.CurrentPlayer == WhoPlay.Wizard)
                     {
                         // add wall in slot index x
-                        Globals.slots[index].Update(gameTime, WallType.Dirt);
+                        AddWall(index, projectiles[0].type, gameTime);
                     }
 
                     projectiles.RemoveAt(0);
+                    Globals.CurrentPlayer = Globals.CurrentPlayer == WhoPlay.Thief ? WhoPlay.Wizard : WhoPlay.Thief;
+                    Globals.ResetTimer();
                 }
             }
 
         }
-
+        public void AddWall(int INDEX, String type, GameTime gameTime)
+        {
+            WallType wall = WallType.Non;
+            switch (type)
+            {
+                case "dirt": wall = WallType.Dirt; break;
+                case "water": wall = WallType.Water; break;
+                case "wind": wall = WallType.Wind; break;
+                case "fire": wall = WallType.Fire; break;
+            }
+            Globals.slots[INDEX].Update(gameTime, wall);
+        }
 
         public virtual void AddProjectile(object INFO)
         {
-            projectiles.Add((Projectile2D)INFO);
+            projectiles.Add((obj)INFO);
         }
 
         public virtual void Draw(Vector2 OFFSET)

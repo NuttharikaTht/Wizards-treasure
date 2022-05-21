@@ -58,8 +58,8 @@ namespace Projectile
         public virtual void Firing()
         {
             CurrentState = PlayerState.Firing;
-            Globals.CurrentPlayer = Globals.CurrentPlayer == WhoPlay.Thief ? WhoPlay.Wizard : WhoPlay.Thief;
-            Globals.ResetTimer();
+            
+            
         }
 
         public virtual void Update(GameTime gameTime)
