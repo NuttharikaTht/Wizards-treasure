@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <SourceFile>C:/Users/praph/Desktop/ComGame/Wizards-treasure/Projectile/Projectile/Content/fonts/Minecraft_24.spritefont</SourceFile>
-  <SourceTime>2022-05-20T15:51:48.9100178+07:00</SourceTime>
+  <SourceTime>2022-05-21T20:09:20.5062646+07:00</SourceTime>
   <DestFile>C:/Users/praph/Desktop/ComGame/Wizards-treasure/Projectile/Projectile/Content/bin/DesktopGL/fonts/Minecraft_24.xnb</DestFile>
-  <DestTime>2022-05-20T16:41:49.9065501+07:00</DestTime>
+  <DestTime>2022-05-21T20:13:11.1969355+07:00</DestTime>
   <Importer>FontDescriptionImporter</Importer>
   <ImporterTime>2020-08-10T23:17:54+07:00</ImporterTime>
   <Processor>FontDescriptionProcessor</Processor>

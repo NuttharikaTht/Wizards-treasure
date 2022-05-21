@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Media;
 using Projectile.Controls;
 
 namespace Projectile.States
@@ -18,11 +19,16 @@ namespace Projectile.States
         Texture2D bg_menu;
         Texture2D logo;
 
+        Song song;
+
         public MenuState(Main game, GraphicsDevice graphicsDevice, ContentManager content)
           : base(game, graphicsDevice, content)
         {
             bg_menu = _content.Load<Texture2D>("MenuState/bg_menu");
-            logo = _content.Load<Texture2D>("MenuState/logo");
+            logo = _content.Load<Texture2D>("MenuState/newlogo");
+
+            song = _content.Load<Song>("Sound/sound");
+            MediaPlayer.Play(song);
 
             var bt_start = _content.Load<Texture2D>("MenuState/bt_start");
             var bt_exit = _content.Load<Texture2D>("MenuState/bt_exit");
@@ -60,7 +66,7 @@ namespace Projectile.States
             Globals.spriteBatch.Begin();
 
             Globals.spriteBatch.Draw(bg_menu, new Vector2(0, 0), Color.White);
-            Globals.spriteBatch.Draw(logo, new Vector2(415, 249), Color.White);
+            Globals.spriteBatch.Draw(logo, new Vector2(356, 152), Color.White);
 
             foreach (var component in _components)
                 component.Draw(gameTime, spriteBatch);
