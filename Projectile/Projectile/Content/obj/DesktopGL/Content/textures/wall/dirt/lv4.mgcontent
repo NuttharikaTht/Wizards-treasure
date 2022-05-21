@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <SourceFile>/Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/Content/textures/wall/dirt/lv4.png</SourceFile>
-  <SourceTime>2022-05-20T22:41:46+07:00</SourceTime>
+  <SourceTime>2022-05-21T15:58:26+07:00</SourceTime>
   <DestFile>/Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/Content/bin/DesktopGL/Content/textures/wall/dirt/lv4.xnb</DestFile>
-  <DestTime>2022-05-20T23:14:40.4349936+07:00</DestTime>
+  <DestTime>2022-05-21T16:01:38.9288755+07:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2020-08-10T16:17:54+07:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
