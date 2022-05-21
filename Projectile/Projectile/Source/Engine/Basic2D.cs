@@ -28,6 +28,7 @@ namespace Projectile
             return isHit;
         }
 
+        public Basic2D() { }
         public Basic2D(String PATH, Vector2 POS, Vector2 DIMS)
         {
 

@@ -73,6 +73,7 @@ namespace Projectile
                     {
                         CurrentState = PlayerState.Aiming;
                         arrow.pos = new Vector2(pos.X + 90, pos.Y);
+                        arrow.item = null;
                         staminaUsage += 5;
 
                         //stamina -= 5;

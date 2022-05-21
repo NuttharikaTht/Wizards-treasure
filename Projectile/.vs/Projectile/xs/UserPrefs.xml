@@ -1,17 +1,17 @@
 ﻿<Properties StartupConfiguration="{2AC6D68A-6993-428A-8159-013AB0C9BA28}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Projectile/States/GameState.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Projectile/Source/Engine/Slots.cs">
     <Files>
       <File FileName="Projectile/Source/Gameplay/World.cs" Line="53" Column="38" />
-      <File FileName="Projectile/Source/Engine/Slots.cs" Line="93" Column="31" />
+      <File FileName="Projectile/Source/Engine/Slots.cs" Line="26" Column="6" />
       <File FileName="Projectile/Source/Gameplay/World/Wall/Dirt.cs" />
-      <File FileName="Projectile/Source/Gameplay/World/Arrow.cs" Line="103" Column="1" />
-      <File FileName="Projectile/Source/Gameplay/World/Structure/Tresure.cs" Line="1" Column="1" />
-      <File FileName="Projectile/Source/Gameplay/World/Structure/Structure.cs" Line="1" Column="1" />
-      <File FileName="Projectile/Source/Gameplay/World/Structure/Floor.cs" Line="1" Column="1" />
-      <File FileName="Projectile/Source/Engine/Basic2D.cs" Line="37" Column="1" />
-      <File FileName="Projectile/Source/Gameplay/World/Player/Thief.cs" Line="101" Column="1" />
-      <File FileName="Projectile/Main.cs" Line="1" Column="1" />
-      <File FileName="Projectile/States/GameState.cs" Line="1" Column="1" />
+      <File FileName="Projectile/Source/Gameplay/World/Arrow.cs" />
+      <File FileName="Projectile/Source/Gameplay/World/Structure/Tresure.cs" />
+      <File FileName="Projectile/Source/Gameplay/World/Structure/Structure.cs" />
+      <File FileName="Projectile/Source/Gameplay/World/Structure/Floor.cs" />
+      <File FileName="Projectile/Source/Engine/Basic2D.cs" />
+      <File FileName="Projectile/Source/Gameplay/World/Player/Thief.cs" />
+      <File FileName="Projectile/Main.cs" />
+      <File FileName="Projectile/States/GameState.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -23,7 +23,9 @@
                 <Node name="textures" expanded="True" />
               </Node>
               <Node name="Source" expanded="True">
-                <Node name="Engine" expanded="True" />
+                <Node name="Engine" expanded="True">
+                  <Node name="Slots.cs" selected="True" />
+                </Node>
                 <Node name="Gameplay" expanded="True">
                   <Node name="World" expanded="True">
                     <Node name="Player" expanded="True" />
@@ -33,9 +35,7 @@
                   </Node>
                 </Node>
               </Node>
-              <Node name="States" expanded="True">
-                <Node name="GameState.cs" selected="True" />
-              </Node>
+              <Node name="States" expanded="True" />
             </Node>
           </Node>
         </State>

@@ -22,12 +22,8 @@ namespace Projectile
         Wind = 0x4,
         Fire = 0x8,
     }
-    public class Slots
+    public class Slots : Basic2D
     {
-        public float rot;
-        public Vector2 pos, dims;
-
-        public Texture2D model;
         public String type;
         public int index;
         private readonly int areaSize = 1;
@@ -236,13 +232,13 @@ namespace Projectile
 
         }
 
-        public virtual void Update(GameTime gameTime, WallType wall)
+        public void Update(GameTime gameTime, WallType wall)
         {
             CheckArea(wall);
-
+            base.Update(gameTime);
         }
 
-        public virtual void Draw(Vector2 OFFSET)
+        public override void Draw(Vector2 OFFSET)
         {
             if (model != null)
             {
@@ -252,7 +248,7 @@ namespace Projectile
         }
 
         //overload
-        public virtual void Draw(Vector2 OFFSET, Vector2 ORIGIN)
+        public override void Draw(Vector2 OFFSET, Vector2 ORIGIN)
         {
             if (model != null)
             {
