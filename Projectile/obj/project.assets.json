@@ -179,11 +179,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/aomms/comgame/Wizards-treasure/Projectile/Projectile/Projectile.csproj",
+      "projectUniqueName": "/Users/aomms/comgame/Wizards-treasure-thief-update-backup/Projectile/Projectile.csproj",
       "projectName": "Projectile",
-      "projectPath": "/Users/aomms/comgame/Wizards-treasure/Projectile/Projectile/Projectile.csproj",
+      "projectPath": "/Users/aomms/comgame/Wizards-treasure-thief-update-backup/Projectile/Projectile.csproj",
       "packagesPath": "/Users/aomms/.nuget/packages/",
-      "outputPath": "/Users/aomms/comgame/Wizards-treasure/Projectile/Projectile/obj/",
+      "outputPath": "/Users/aomms/comgame/Wizards-treasure-thief-update-backup/Projectile/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/aomms/.config/NuGet/NuGet.Config"

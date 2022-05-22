@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>/Users/aomms/comgame/Wizards-treasure/Projectile/Projectile/Content/textures/ammo/thief/BlackHole.png</SourceFile>
-  <SourceTime>2022-05-22T14:51:07.5722856+07:00</SourceTime>
-  <DestFile>/Users/aomms/comgame/Wizards-treasure/Projectile/Projectile/Content/bin/DesktopGL/Content/textures/ammo/thief/BlackHole.xnb</DestFile>
-  <DestTime>2022-05-22T14:51:11.7314842+07:00</DestTime>
+  <SourceFile>/Users/aomms/comgame/Wizards-treasure-thief-update/Projectile/Content/textures/ammo/thief/BlackHole.png</SourceFile>
+  <SourceTime>2022-05-22T14:52:57+07:00</SourceTime>
+  <DestFile>/Users/aomms/comgame/Wizards-treasure-thief-update/Projectile/Content/bin/DesktopGL/Content/textures/ammo/thief/BlackHole.xnb</DestFile>
+  <DestTime>2022-05-22T17:32:40.7117563+07:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2020-08-10T16:17:54+07:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

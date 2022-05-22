@@ -13,9 +13,11 @@ namespace Projectile
     {
         public Arrow arrow;
 
-        public int stamina;
+        public float stamina;
         public Rectangle staminaRect;
         public Texture2D staminaTexture;
+        private int[] staminaCount = new int[26];
+        private int count;
 
         public Rectangle thiefRect;
 
@@ -23,54 +25,63 @@ namespace Projectile
         public int wallHitCost;
         public SlotsState wallLevel;
 
-        private int staminaUsage;
+        private float staminaUsage;
 
-        public Thief(String PATH, Vector2 POS, Vector2 DIMS, int newStamina) : base(PATH, POS, DIMS)
+        public Thief(String PATH, Vector2 POS, Vector2 DIMS, float newStamina) : base(PATH, POS, DIMS)
         {
             arrow = new Arrow("shooter/arrow", new Vector2(pos.X + 20, pos.Y), new Vector2(40, 40), true, this);
             staminaTexture = Globals.content.Load<Texture2D>("textures/stamina");
             CurrentState = PlayerState.Running;
-            hitWall = false;
             stamina = newStamina;
             thiefRect = new Rectangle((int) pos.X, (int) pos.Y, (int) dims.X, (int) dims.Y);
         }
 
         public void staminaUp()
         {
-            int stamina = this.stamina;
+            float stamina = this.stamina;
             stamina += (stamina * 30) / 100;
             this.stamina = stamina;
         }
 
-        public bool HitWallCheck(Rectangle rect1)
+        public bool HitWallCheck()
         {
             SlotsState wallLevel = SlotsState.Walk;
+
             for (int i = 0; i < Globals.slots.Count(); i++)
             {
-                hitWall = rect1.Intersects(Globals.slots[i].rect);
-
-                if (hitWall)
+                hitWall = false;
+                
+                if (thiefRect.Intersects(Globals.slots[i].rect))
                 {
-                    wallLevel = Globals.slots[i].CurrentState;
+                    if (Globals.slots[i].CurrentState != SlotsState.Walk)
+                    {
+                        //staminaCount[i] += 1;
+                        hitWall = true;
+                        wallLevel = Globals.slots[i].CurrentState;
+                        if (wallLevel == SlotsState.Wall1) staminaUsage += 5;//0.3125f;
+                        else if (wallLevel == SlotsState.Wall2) staminaUsage += 10;//0.625f;
+                        else if (wallLevel == SlotsState.Wall3) staminaUsage += 15;// 0.9375f;
+                        else if (wallLevel == SlotsState.Wall4) staminaUsage += 20;// 1.25f;
+                        else if (wallLevel == SlotsState.Wall5) staminaUsage += 25; // 1.5625f;
 
-                    //if (wallLevel == SlotsState.Walk) staminaUsage += 100; //test
-                    if (wallLevel == SlotsState.Wall1) staminaUsage += 10;
-                    else if (wallLevel == SlotsState.Wall2) staminaUsage += 20;
-                    else if (wallLevel == SlotsState.Wall3) staminaUsage += 30;
-                    else if (wallLevel == SlotsState.Wall4) staminaUsage += 40;
-                    else if (wallLevel == SlotsState.Wall5) staminaUsage += 50;
+                        //staminaCount[i] = (int) staminaUsage;
+                        //count = staminaCount[i];
 
-                    break;
+                        break;
+                    }
                 }
+
             }
+
             return hitWall;
         }
 
         public override void Update(GameTime gameTime)
         {
             staminaUsage = 0;
-            staminaRect = new Rectangle((int)pos.X - 40, (int)pos.Y - 80, stamina /5, 30);
+            staminaRect = new Rectangle((int)pos.X - 40, (int)pos.Y - 80, (int) stamina/5, 30);
             elapsed += (float)gameTime.ElapsedGameTime.TotalSeconds;
+            thiefRect = new Rectangle((int)pos.X, (int)pos.Y, (int)dims.X, (int)dims.Y);
             //hitWall = HitWallCheck(thiefRect);
 
             if (!checkAim())
@@ -81,7 +92,7 @@ namespace Projectile
                     {
                         pos = new Vector2(pos.X - 4, pos.Y);
                         //wallLevel = HitWallCheck(thiefRect);
-                        hitWall = HitWallCheck(thiefRect);
+                        hitWall = HitWallCheck();
                         if (!hitWall) {
                             staminaUsage += 1;
                         }
@@ -91,7 +102,7 @@ namespace Projectile
                     {
                         pos = new Vector2(pos.X + 4, pos.Y);
                         //wallLevel = HitWallCheck(thiefRect);
-                        hitWall = HitWallCheck(thiefRect);
+                        hitWall = HitWallCheck();
                         if (!hitWall)
                         {
                             staminaUsage += 1;
@@ -145,9 +156,12 @@ namespace Projectile
 
         public override void Draw(Vector2 OFFSET)
         {
-            //"-" + staminaUsage.ToString()
             
-            //Globals.spriteBatch.DrawString(engFonts, wallLevel.ToString(), new Vector2(staminaRect.X + 100, staminaRect.Y + 40), Color.Yellow);
+
+            //Debugging ว่าชนกำแพงไหม
+            Globals.spriteBatch.DrawString(engFonts, hitWall.ToString(), new Vector2(staminaRect.X, staminaRect.Y - 40), Color.Yellow);
+
+            Globals.spriteBatch.DrawString(engFonts, "-" + staminaUsage.ToString() , new Vector2(staminaRect.X + 100, staminaRect.Y + 40), Color.Yellow);
             Globals.spriteBatch.Draw(staminaTexture, staminaRect, Color.White);
             Globals.spriteBatch.DrawString(engFonts, stamina.ToString(), new Vector2(staminaRect.X + 5, staminaRect.Y + 5), Color.Black);
             base.Draw(OFFSET);
