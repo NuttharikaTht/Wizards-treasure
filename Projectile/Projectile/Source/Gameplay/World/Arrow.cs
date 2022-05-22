@@ -18,7 +18,6 @@ namespace Projectile
         public string itemName;
         public obj newItem;
 
-        public string pathImage = "FlowerShow";
         public SpriteFont engFonts;
 
         public Arrow(String PATH, Vector2 POS, Vector2 DIMS, bool ISTHIEF, Player OWNER) : base(PATH, POS, DIMS, ISTHIEF)
@@ -27,6 +26,7 @@ namespace Projectile
             owner = OWNER;
             engFonts = Globals.content.Load<SpriteFont>("fonts/Minecraft");
         }
+
         public string randomWand()
         {
             List<KeyValuePair<string, double>> elements = new List<KeyValuePair<string, double>>();
@@ -53,6 +53,7 @@ namespace Projectile
             }
             return name;
         }
+
         public string randomItem()
         {
             List<KeyValuePair<string, double>> elements = new List<KeyValuePair<string, double>>();
@@ -112,7 +113,8 @@ namespace Projectile
             {
                 owner.Firing();
                 GameGlobals.PassProjectile(item);
-                item = null;
+
+                if (!isThief) item = null;
             }
 
             base.Update(gameTime);

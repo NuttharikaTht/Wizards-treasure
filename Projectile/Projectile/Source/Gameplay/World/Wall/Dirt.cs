@@ -6,8 +6,9 @@ namespace Projectile.Source.Gameplay.World.Wall
 {
     public class Dirt : Slots
     {
-        public Dirt(Vector2 POS, int INDEX) : base(WallType.Dirt, POS, INDEX)
+        public Dirt(WallType wallType, Vector2 POS, int INDEX) : base(WallType.Dirt, POS, INDEX)
         {
+
         }
         public override void Draw(Vector2 OFFSET)
         {

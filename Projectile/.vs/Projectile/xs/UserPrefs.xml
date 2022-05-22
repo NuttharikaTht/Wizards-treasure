@@ -1,19 +1,22 @@
 ﻿<Properties StartupConfiguration="{2AC6D68A-6993-428A-8159-013AB0C9BA28}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Projectile/Main.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Projectile/Source/Engine/Basic2D.cs">
     <Files>
-      <File FileName="Projectile/Source/Gameplay/World/Arrow.cs" Line="100" Column="18" />
-      <File FileName="Projectile/Source/Engine/Player.cs" />
-      <File FileName="Projectile/Source/Gameplay/World/Player/Thief.cs" />
-      <File FileName="Projectile/Source/Gameplay/World/Player/Wizard.cs" />
-      <File FileName="Projectile/Source/Gameplay/World/Projectile/obj.cs" />
-      <File FileName="Projectile/Source/Gameplay/World.cs" Line="88" Column="22" />
-      <File FileName="Projectile/Source/Gameplay/World/Projectile/Projectile2D.cs" Line="24" Column="27" />
-      <File FileName="Projectile/Source/Engine/Slots.cs" Line="59" Column="9" />
-      <File FileName="Projectile/Source/Engine/Globals.cs" Line="50" Column="33" />
+      <File FileName="Projectile/Source/Gameplay/World/Arrow.cs" Line="108" Column="76" />
+      <File FileName="Projectile/Source/Engine/Player.cs" Line="83" Column="19" />
+      <File FileName="Projectile/Source/Gameplay/World/Player/Thief.cs" Line="147" Column="1" />
+      <File FileName="Projectile/Source/Gameplay/World/Player/Wizard.cs" Line="48" Column="41" />
+      <File FileName="Projectile/Source/Gameplay/World/Projectile/obj.cs" Line="20" Column="63" />
+      <File FileName="Projectile/Source/Gameplay/World.cs" Line="123" Column="45" />
+      <File FileName="Projectile/Source/Gameplay/World/Projectile/Projectile2D.cs" Line="39" Column="1" />
+      <File FileName="Projectile/Source/Engine/Slots.cs" Line="34" Column="34" />
+      <File FileName="Projectile/Source/Engine/Globals.cs" />
       <File FileName="Projectile/Source/Engine/Input/McKeyboard.cs" />
-      <File FileName="Projectile/States/MenuState.cs" Line="29" Column="13" />
-      <File FileName="Projectile/States/SoundControl.cs" Line="37" Column="51" />
-      <File FileName="Projectile/Main.cs" Line="63" Column="68" />
+      <File FileName="Projectile/States/MenuState.cs" />
+      <File FileName="Projectile/States/SoundControl.cs" />
+      <File FileName="Projectile/Main.cs" />
+      <File FileName="Projectile/Source/Engine/Input/Keyboard/McKey.cs" />
+      <File FileName="Projectile/Source/Gameplay/World/Wall/Dirt.cs" Line="19" Column="1" />
+      <File FileName="Projectile/Source/Engine/Basic2D.cs" Line="20" Column="31" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -22,19 +25,19 @@
             <Node name="Projectile" expanded="True">
               <Node name="Source" expanded="True">
                 <Node name="Engine" expanded="True">
-                  <Node name="Input" expanded="True" />
+                  <Node name="Input" expanded="True">
+                    <Node name="Keyboard" expanded="True" />
+                  </Node>
+                  <Node name="Basic2D.cs" selected="True" />
                 </Node>
                 <Node name="Gameplay" expanded="True">
                   <Node name="World" expanded="True">
                     <Node name="Player" expanded="True" />
                     <Node name="Projectile" expanded="True" />
-                    <Node name="Structure" expanded="True" />
                     <Node name="Wall" expanded="True" />
                   </Node>
                 </Node>
               </Node>
-              <Node name="States" expanded="True" />
-              <Node name="Main.cs" selected="True" />
             </Node>
           </Node>
         </State>

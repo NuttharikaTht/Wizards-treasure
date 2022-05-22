@@ -19,9 +19,9 @@ namespace Projectile
         public Texture2D model;
         public Rectangle rect;
 
-        public bool collision(Basic2D obj1, Basic2D obj2)
+        public bool collision(Rectangle obj1, Rectangle obj2)
         {
-            if (obj1.rect.Intersects(obj2.rect))
+            if (obj1.Intersects(obj2))
             {
                 isHit = true;
             }

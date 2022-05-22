@@ -6,6 +6,8 @@
   <SourceFiles>
     <File>/Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/Content/fonts/Minecraft.spritefont</File>
     <File>/Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/Content/fonts/Minecraft_24.spritefont</File>
+    <File>/Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/Content/fonts/Minecraft_12.spritefont</File>
+    <File>/Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/Content/fonts/Minecraft_16.spritefont</File>
     <File>/Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/Content/GameState/bg_game.jpg</File>
     <File>/Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/Content/GameState/pause.jpg</File>
     <File>/Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/Content/GameState/time.jpg</File>
@@ -64,8 +66,12 @@
     <File>/Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/Content/textures/wall/fire/lv3.png</File>
     <File>/Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/Content/textures/wall/fire/lv4.png</File>
     <File>/Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/Content/textures/wall/fire/lv5.png</File>
+    <File>/Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/Content/textures/descriptionBox.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

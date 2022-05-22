@@ -58,8 +58,8 @@ namespace Projectile
         public virtual void Firing()
         {
             CurrentState = PlayerState.Firing;
-            
-            
+
+
         }
 
         public virtual void Update(GameTime gameTime)

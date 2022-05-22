@@ -38,22 +38,18 @@ namespace Projectile
                 }
             }
 
-            if (elapsed > 0.1f)
+            if (Globals.keyboard.GetPressRelease(Keys.Space))
             {
-                if (Globals.keyboard.GetPress("Space"))
+                if (!checkAim())
                 {
-                    if (!checkAim())
-                    {
-                        CurrentState = PlayerState.Aiming;
-                        arrow.pos = new Vector2(pos.X - 90, pos.Y);
-                    }
-                    else
-                    {
-                        CurrentState = PlayerState.Running;
-                        arrow.pos = new Vector2(0, 0);
-                    }
+                    CurrentState = PlayerState.Aiming;
+                    arrow.pos = new Vector2(pos.X - 90, pos.Y);
                 }
-                elapsed = 0f;
+                else
+                {
+                    CurrentState = PlayerState.Running;
+                    arrow.pos = new Vector2(0, 0);
+                }
             }
 
 

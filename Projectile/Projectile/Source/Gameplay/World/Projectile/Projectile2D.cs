@@ -69,14 +69,15 @@ namespace Projectile
                     isDone = true;
                 }
 
-                isHit = collision(this, World.floor);
+                isHit = collision(this.rect, World.floor.rect);
             }
 
 
         }
+        /*
         public virtual bool IsHit(List<Unit> UNITS)
         {
             return false;
-        }
+        }*/
     }
 }

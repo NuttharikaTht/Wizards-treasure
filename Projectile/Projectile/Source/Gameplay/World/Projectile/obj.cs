@@ -22,11 +22,14 @@ namespace Projectile
             isHit = false;
             isDone = false;
             type = TYPE;
+            //rect = new Rectangle((int)pos.X, (int)pos.Y, (int)dims.X, (int)dims.Y);
             //done = false;
         }
 
         public override void Update(GameTime gameTime, Vector2 OFFSET, List<Unit> UNITS)
         {
+            //rect = new Rectangle((int)(pos.X + OFFSET.X), (int)(pos.Y + OFFSET.Y), (int)dims.X, (int)dims.Y);
+
             base.Update(gameTime, OFFSET, UNITS);
         }
 

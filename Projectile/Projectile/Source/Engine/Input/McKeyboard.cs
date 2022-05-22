@@ -59,6 +59,17 @@ namespace Projectile
 
             }
 
+            return false;
+        }
+
+        public bool GetPressRelease(Keys k)
+        {
+
+            if (newKeyboard.IsKeyDown(k) && oldKeyboard.IsKeyUp(k))
+            {
+                return true;
+            }
+
 
             return false;
         }
