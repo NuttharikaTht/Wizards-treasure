@@ -54,7 +54,7 @@ namespace Projectile
             }
            
 
-            Globals.CurrentPlayer = WhoPlay.Thief;
+            Globals.CurrentPlayer = WhoPlay.Wizard;
             thief = new Thief("player/thief", new Vector2(40, 542), new Vector2(90, 90), 500);
             wizard = new Wizard("player/wizard", new Vector2(1180, 542), new Vector2(90, 90));
 
@@ -99,7 +99,7 @@ namespace Projectile
                         float x = (projectiles[0].pos.X - 80) / 40;
                         int index = (int)MathF.Round(x, MidpointRounding.AwayFromZero);
 
-                        if (Globals.CurrentPlayer == WhoPlay.Wizard)
+                        if (Globals.CurrentPlayer == WhoPlay.Wizard && index > 0)
                         {
                             // add wall in slot index x
                             AddWall(index, projectiles[0].type, gameTime);
@@ -111,16 +111,24 @@ namespace Projectile
                         }
 
                         projectiles.RemoveAt(0);
-                        Globals.SwapPlayer();
-                        switch (Globals.CurrentPlayer)
-                        {
-                            case WhoPlay.Thief: thief.CurrentState = PlayerState.Running; break;
-                            case WhoPlay.Wizard: wizard.CurrentState = PlayerState.Running; break;
-                        }
+                        WordSwapPalyer();
                     }
                 }
             }
-
+            if (Globals.timer <= 0)
+            {
+                WordSwapPalyer();
+            }
+        }
+        public void WordSwapPalyer() {
+            thief.CurrentState = PlayerState.Idle;
+            wizard.CurrentState = PlayerState.Idle;
+            Globals.SwapPlayer();
+            switch (Globals.CurrentPlayer)
+            {
+                case WhoPlay.Thief: thief.CurrentState = PlayerState.Running; break;
+                case WhoPlay.Wizard: wizard.CurrentState = PlayerState.Running; break;
+            }
         }
         public void AddWall(int INDEX, String type, GameTime gameTime)
         {
@@ -229,11 +237,11 @@ namespace Projectile
             }
             if (Globals.CurrentPlayer == WhoPlay.Thief)
             {
-                Globals.spriteBatch.DrawString(engFonts, "Thief's Turn", new Vector2(940, 40), Color.Yellow);
+                Globals.spriteBatch.DrawString(engFonts, "Thief's Turn", new Vector2(900, 45), Color.Yellow);
             }
             else
             {
-                Globals.spriteBatch.DrawString(engFonts, "Wizard's Turn", new Vector2(940, 40), Color.Yellow);
+                Globals.spriteBatch.DrawString(engFonts, "Wizard's Turn", new Vector2(900, 45), Color.Yellow);
             }
 
             if (thief.checkAim())
@@ -242,7 +250,7 @@ namespace Projectile
                 Globals.spriteBatch.Draw(boxTexture, descriptionBox, Color.White);
                 Globals.spriteBatch.Draw(itemTexture, itemShowBox, Color.White);
                 Globals.spriteBatch.DrawString(itemNameFont, nameI, new Vector2(130, 80), Color.Yellow);
-                Globals.spriteBatch.DrawString(descriptionFont, description, new Vector2(130, 100), Color.White);
+                Globals.spriteBatch.DrawString(descriptionFont, description, new Vector2(130, 105), Color.White);
             }
 
             if (wizard.checkAim())
@@ -251,7 +259,7 @@ namespace Projectile
                 Globals.spriteBatch.Draw(boxTexture, descriptionBox, Color.White);
                 Globals.spriteBatch.Draw(itemTexture, itemShowBox, Color.White);
                 Globals.spriteBatch.DrawString(itemNameFont, nameI, new Vector2(130, 80), Color.Yellow);
-                Globals.spriteBatch.DrawString(descriptionFont, description, new Vector2(130, 100), Color.White);
+                Globals.spriteBatch.DrawString(descriptionFont, description, new Vector2(130, 105), Color.White);
             }
             //projectile.Draw(OFFSET);
             for (int i = 0; i < projectiles.Count; i++)

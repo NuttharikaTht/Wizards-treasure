@@ -58,20 +58,28 @@ namespace Projectile
         {
             if (!isDone)
             {
-                if (!isHit)
+                if (0 <= pos.X && pos.X <= 1280)
                 {
-                    base.Draw(OFFSET);
-                    //rect = new Rectangle((int)pos.X, (int)pos.Y, (int)dims.X, (int)dims.Y);
+                    if (!isHit)
+                    {
+                        base.Draw(OFFSET);
+                        //inArea = checkPlayableArea(rect);
+                        //rect = new Rectangle((int)pos.X, (int)pos.Y, (int)dims.X, (int)dims.Y);
+                    }
+                    else
+                    {
+                        base.Draw(OFFSET);
+                        isDone = true;
+                    }
+
+                    isHit = collision(this.rect, World.floor.rect);
                 }
                 else
                 {
-                    base.Draw(OFFSET);
                     isDone = true;
                 }
 
-                isHit = collision(this.rect, World.floor.rect);
             }
-
 
         }
         /*

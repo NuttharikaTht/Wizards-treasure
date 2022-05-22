@@ -104,7 +104,7 @@ namespace Projectile.States
                 component.Draw(gameTime, spriteBatch);
 
             // time
-            Globals.spriteBatch.DrawString(gameFont, Globals.timer.ToString("00" + "  S"), new Vector2(664, 50), Color.White);
+            Globals.spriteBatch.DrawString(gameFont, Globals.timer.ToString("00" + "  S"), new Vector2(665, 58), Color.White);
 
 
 
@@ -165,7 +165,8 @@ namespace Projectile.States
                         component.Update(gameTime);
 
                     // update time
-                    Globals.timer -= (float)gameTime.ElapsedGameTime.TotalSeconds;
+                    if (world.wizard.CurrentState != PlayerState.Firing && world.thief.CurrentState != PlayerState.Firing)
+                        Globals.timer -= (float)gameTime.ElapsedGameTime.TotalSeconds;
 
                     //update game play
                     Globals.gameTime = gameTime;

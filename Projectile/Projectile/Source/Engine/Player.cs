@@ -45,7 +45,7 @@ namespace Projectile
         {
             pos = POS;
             dims = DIMS;
-
+            CurrentState = PlayerState.Running;
             model = Globals.content.Load<Texture2D>("textures/" + PATH);
             engFonts = Globals.content.Load<SpriteFont>("fonts/Minecraft");
         }
@@ -63,7 +63,7 @@ namespace Projectile
 
         public virtual void Update(GameTime gameTime)
         {
-            if (Globals.timer <= 0) Globals.SwapPlayer();
+            
         }
 
         public virtual void Draw(Vector2 OFFSET)

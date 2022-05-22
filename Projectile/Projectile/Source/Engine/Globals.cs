@@ -36,6 +36,7 @@ namespace Projectile
             get { return power; }
             set { if (value >= 0 && value <= 100) power = value; }
         }
+        public static float LimitStamina = 100;
 
         static WhoPlay currentPlayer;
         public static WhoPlay CurrentPlayer
@@ -68,6 +69,7 @@ namespace Projectile
             CurrentPlayer = CurrentPlayer == WhoPlay.Thief ? WhoPlay.Wizard : WhoPlay.Thief;
 
             power = 0;
+            LimitStamina = 100;
             ResetTimer();
         }
 

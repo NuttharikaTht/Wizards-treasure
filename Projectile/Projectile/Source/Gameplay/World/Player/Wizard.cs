@@ -16,7 +16,6 @@ namespace Projectile
         public Wizard(String PATH, Vector2 POS, Vector2 DIMS) : base(PATH, POS, DIMS)
         {
             arrow = new Arrow("shooter/arrow", new Vector2(pos.X + 20, pos.Y), new Vector2(40, 40), false, this);
-            CurrentState = PlayerState.Idle;
         }
 
         public override void Update(GameTime gameTime)

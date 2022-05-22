@@ -31,7 +31,7 @@ namespace Projectile
         {
             arrow = new Arrow("shooter/arrow", new Vector2(pos.X + 20, pos.Y), new Vector2(40, 40), true, this);
             staminaTexture = Globals.content.Load<Texture2D>("textures/stamina");
-            CurrentState = PlayerState.Running;
+
             stamina = newStamina;
             thiefRect = new Rectangle((int)pos.X, (int)pos.Y, (int)dims.X, (int)dims.Y);
         }
@@ -85,22 +85,27 @@ namespace Projectile
             switch (CurrentState)
             {
                 case PlayerState.Running:
-                    if (Globals.keyboard.GetPress("A"))
+                    if (Globals.LimitStamina > 0)
                     {
-                        pos = new Vector2(pos.X - 4, pos.Y);
-                        hitWall = HitWallCheck();
-                        if (!hitWall)
+                        if (Globals.keyboard.GetPress("A"))
                         {
-                            staminaUsage += 1;
+                            pos = new Vector2(pos.X - 4, pos.Y);
+                            hitWall = HitWallCheck();
+                            if (!hitWall)
+                            {
+                                staminaUsage += 1;
+                                Globals.LimitStamina -= 1;
+                            }
                         }
-                    }
-                    if (Globals.keyboard.GetPress("D"))
-                    {
-                        pos = new Vector2(pos.X + 4, pos.Y);
-                        hitWall = HitWallCheck();
-                        if (!hitWall)
+                        if (Globals.keyboard.GetPress("D"))
                         {
-                            staminaUsage += 1;
+                            pos = new Vector2(pos.X + 4, pos.Y);
+                            hitWall = HitWallCheck();
+                            if (!hitWall)
+                            {
+                                staminaUsage += 1;
+                                Globals.LimitStamina -= 1;
+                            }
                         }
                     }
                     if (Globals.keyboard.GetPressRelease(Keys.Space))
@@ -128,6 +133,7 @@ namespace Projectile
             }
 
             stamina -= staminaUsage;
+            
             if (pos.X >= 1120) { Globals.CurrentStatus = WhoWin.Thief; }
             if (stamina <= 0) { Globals.CurrentStatus = WhoWin.Wizard; }
 
