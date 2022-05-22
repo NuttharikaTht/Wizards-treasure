@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <SourceFile>/Users/aomms/comgame/Wizards-treasure/Projectile/Projectile/Content/textures/descriptionBox.png</SourceFile>
-  <SourceTime>2022-05-22T13:20:44.1959226+07:00</SourceTime>
+  <SourceTime>2022-05-22T14:51:07.5745554+07:00</SourceTime>
   <DestFile>/Users/aomms/comgame/Wizards-treasure/Projectile/Projectile/Content/bin/DesktopGL/Content/textures/descriptionBox.xnb</DestFile>
-  <DestTime>2022-05-22T13:28:54.8695171+07:00</DestTime>
+  <DestTime>2022-05-22T14:51:12.1142248+07:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2020-08-10T16:17:54+07:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

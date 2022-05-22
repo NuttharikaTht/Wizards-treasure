@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <SourceFile>/Users/aomms/comgame/Wizards-treasure/Projectile/Projectile/Content/MenuState/logo.png</SourceFile>
-  <SourceTime>2022-05-22T00:42:55+07:00</SourceTime>
+  <SourceTime>2022-05-22T14:51:07.0900427+07:00</SourceTime>
   <DestFile>/Users/aomms/comgame/Wizards-treasure/Projectile/Projectile/Content/bin/DesktopGL/Content/MenuState/logo.xnb</DestFile>
-  <DestTime>2022-05-22T01:22:40.7406578+07:00</DestTime>
+  <DestTime>2022-05-22T14:51:10.2111572+07:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2020-08-10T16:17:54+07:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
