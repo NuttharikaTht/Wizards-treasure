@@ -11,6 +11,8 @@
     <File>/Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/Content/GameState/bg_game.jpg</File>
     <File>/Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/Content/GameState/pause.jpg</File>
     <File>/Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/Content/GameState/time.jpg</File>
+    <File>/Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/Content/GameState/win_thief.png</File>
+    <File>/Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/Content/GameState/win_wizard.png</File>
     <File>/Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/Content/MenuState/bg_menu.png</File>
     <File>/Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/Content/MenuState/bt_exit.png</File>
     <File>/Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/Content/MenuState/bt_start.png</File>
@@ -69,6 +71,8 @@
     <File>/Users/nirattisai/Documents/kmitl/year 3/term 2/com game/final/new brance/Wizards-treasure/Projectile/Projectile/Content/textures/descriptionBox.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

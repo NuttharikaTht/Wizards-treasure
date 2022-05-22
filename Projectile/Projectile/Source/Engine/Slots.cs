@@ -68,8 +68,6 @@ namespace Projectile
                 case SlotsState.Walk:
                     dims = new Vector2(40, 40);
                     pos.Y = 572;
-                    model = Globals.content.Load<Texture2D>("textures/blockLine");
-                    //rect = new Rectangle((int)pos.X, (int)pos.Y, (int)dims.X, (int)dims.Y);
                     break;
                 case SlotsState.Wall1:
                     dims = new Vector2(40, 40);

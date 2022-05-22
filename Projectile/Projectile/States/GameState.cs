@@ -17,10 +17,12 @@ namespace Projectile.States
     {
         Texture2D bg_game;
         Texture2D bg_time;
+        Texture2D thief_win_box, wizard_win_box;
 
         SpriteFont gameFont;
 
         State PauseState;
+        State ThiefWinState, WizardWinState;
 
         private List<Component> _components;
         private List<Component> _resume;
@@ -38,7 +40,7 @@ namespace Projectile.States
         public GameState(Main game, GraphicsDevice graphicsDevice, ContentManager content)
           : base(game, graphicsDevice, content)
         {
-          //
+            //
             cursur = new Basic2D("shooter/aiming", new Vector2(0, 0), new Vector2(40, 40));
 
             Globals.keyboard = new McKeyboard();
@@ -47,21 +49,29 @@ namespace Projectile.States
             world = new World();
 
             //
+            Globals.CurrentStatus = WhoWin.Non;
             Globals.ResetTimer();
             bg_game = _content.Load<Texture2D>("GameState/bg_game");
             bg_time = _content.Load<Texture2D>("GameState/time");
+
+            thief_win_box = _content.Load<Texture2D>("GameState/win_thief");
+            wizard_win_box = _content.Load<Texture2D>("GameState/win_wizard");
 
             gameFont = _content.Load<SpriteFont>("fonts/Minecraft");
 
             var bt_pause = _content.Load<Texture2D>("GameState/pause");
             var bt_resume = _content.Load<Texture2D>("PauseState/resume");
 
+            ThiefWinState = new WinState(_game, _graphicsDevice, _content, "win_thief");
+            WizardWinState = new WinState(_game, _graphicsDevice, _content, "win_wizard");
+
+
             var pauseGameButton = new Button(bt_pause, null)
             {
                 Position = new Vector2(1185, 36),
                 Text = "",
             };
-           
+
 
             pauseGameButton.Click += PauseGameButton_Click;
 
@@ -91,12 +101,12 @@ namespace Projectile.States
             Globals.spriteBatch.Draw(bg_time, new Vector2(615, 25), Color.White);
 
             foreach (var component in _components)
-                   component.Draw(gameTime, spriteBatch);
+                component.Draw(gameTime, spriteBatch);
 
             // time
             Globals.spriteBatch.DrawString(gameFont, Globals.timer.ToString("00" + "  S"), new Vector2(664, 50), Color.White);
 
-            
+
 
             //draw game play
             world.Draw(Vector2.Zero);
@@ -111,20 +121,27 @@ namespace Projectile.States
             }
 
             //draw game pause
-            if (pause== true)
+            if (pause == true)
             {
 
-             PauseState.Draw(gameTime, spriteBatch);
+                PauseState.Draw(gameTime, spriteBatch);
                 foreach (var component in _resume)
                     component.Draw(gameTime, spriteBatch);
             }
-
+            if (Globals.CurrentStatus == WhoWin.Thief)
+            {
+                ThiefWinState.Draw(gameTime, spriteBatch);
+            }
+            if (Globals.CurrentStatus == WhoWin.Wizard)
+            {
+                WizardWinState.Draw(gameTime, spriteBatch);
+            }
             Globals.spriteBatch.End();
         }
 
         public override void Update(GameTime gameTime)
         {
-            
+
 
             if (pause == true)
             {
@@ -134,23 +151,33 @@ namespace Projectile.States
             }
             else
             {
-                foreach (var component in _components)
-                    component.Update(gameTime);
+                if (Globals.CurrentStatus == WhoWin.Thief)
+                {
+                    ThiefWinState.Update(gameTime);
+                }
+                else if (Globals.CurrentStatus == WhoWin.Wizard)
+                {
+                    WizardWinState.Update(gameTime);
+                }
+                else
+                {
+                    foreach (var component in _components)
+                        component.Update(gameTime);
 
-                // update time
-                Globals.timer -= (float)gameTime.ElapsedGameTime.TotalSeconds;
+                    // update time
+                    Globals.timer -= (float)gameTime.ElapsedGameTime.TotalSeconds;
 
-                //update game play
-                Globals.gameTime = gameTime;
-                Globals.keyboard.Update();
-                Globals.mouse.Update();
+                    //update game play
+                    Globals.gameTime = gameTime;
+                    Globals.keyboard.Update();
+                    Globals.mouse.Update();
 
-                world.Update(Globals.gameTime);
+                    world.Update(Globals.gameTime);
 
-                //Update key that've been pressed
-                Globals.keyboard.UpdateOld();
-                Globals.mouse.UpdateOld();
-
+                    //Update key that've been pressed
+                    Globals.keyboard.UpdateOld();
+                    Globals.mouse.UpdateOld();
+                }
             }
         }
 

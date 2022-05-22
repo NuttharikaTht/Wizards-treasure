@@ -21,35 +21,30 @@ namespace Projectile
 
         public override void Update(GameTime gameTime)
         {
-            elapsed += (float)gameTime.ElapsedGameTime.TotalSeconds;
-            if (!checkAim())
-            {
-                
-            }
-            else
-            {
-                if (Globals.keyboard.GetPress("W"))
-                {
-                    Globals.Power += 1;
-                }
-                if (Globals.keyboard.GetPress("S"))
-                {
-                    Globals.Power -= 1;
-                }
-            }
 
-            if (Globals.keyboard.GetPressRelease(Keys.Space))
+            switch (CurrentState)
             {
-                if (!checkAim())
-                {
-                    CurrentState = PlayerState.Aiming;
-                    arrow.pos = new Vector2(pos.X - 90, pos.Y);
-                }
-                else
-                {
-                    CurrentState = PlayerState.Running;
-                    arrow.pos = new Vector2(0, 0);
-                }
+                case PlayerState.Running:
+                    if (Globals.keyboard.GetPressRelease(Keys.Space))
+                    {
+                        CurrentState = PlayerState.Aiming;
+                        arrow.pos = new Vector2(pos.X - 90, pos.Y);
+                    }
+                    break;
+                case PlayerState.Aiming:
+                    if (Globals.keyboard.GetPress("W"))
+                    {
+                        Globals.Power += 1;
+                    }
+                    if (Globals.keyboard.GetPress("S"))
+                    {
+                        Globals.Power -= 1;
+                    }
+                    if (Globals.keyboard.GetPressRelease(Keys.Space))
+                    {
+                        CurrentState = PlayerState.Running;
+                    }
+                    break;
             }
 
 

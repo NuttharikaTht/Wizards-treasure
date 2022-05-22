@@ -59,12 +59,11 @@ namespace Projectile
         {
             CurrentState = PlayerState.Firing;
 
-
         }
 
         public virtual void Update(GameTime gameTime)
         {
-
+            if (Globals.timer <= 0) Globals.SwapPlayer();
         }
 
         public virtual void Draw(Vector2 OFFSET)
@@ -73,7 +72,7 @@ namespace Projectile
             {
                 if (checkAim())
                 {
-                    Globals.spriteBatch.DrawString(engFonts, Globals.Power.ToString() + " %", new Vector2(pos.X - 10, pos.Y + 65), Color.White);
+                    Globals.spriteBatch.DrawString(engFonts, Globals.Power.ToString() + " %", new Vector2(pos.X - 10, pos.Y + 70), Color.Yellow);
                 }
                 Globals.spriteBatch.Draw(model, new Rectangle((int)(pos.X + OFFSET.X), (int)(pos.Y + OFFSET.Y), (int)dims.X, (int)dims.Y), null, Color.White, rot,
                     new Vector2(model.Bounds.Width / 2, model.Bounds.Height / 2), new SpriteEffects(), 0); ;

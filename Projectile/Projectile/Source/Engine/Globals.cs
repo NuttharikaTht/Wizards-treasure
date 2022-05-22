@@ -18,6 +18,12 @@ namespace Projectile
         Thief,
         Wizard,
     }
+    public enum WhoWin
+    {
+        Non,
+        Thief,
+        Wizard,
+    }
 
     public class Globals
     {
@@ -37,6 +43,12 @@ namespace Projectile
             get { return currentPlayer; }
             set { currentPlayer = value; }
         }
+        static WhoWin currentStatus;
+        public static WhoWin CurrentStatus
+        {
+            get { return currentStatus; }
+            set { currentStatus = value; }
+        }
         public static Slots[] slots = new Slots[26]; 
 
         public static ContentManager content;
@@ -50,7 +62,13 @@ namespace Projectile
         public static SoundControl soundControl;
 
         public static void ResetTimer() {
-            timer = 30;
+            timer = 15;
+        }
+        public static void SwapPlayer() {
+            CurrentPlayer = CurrentPlayer == WhoPlay.Thief ? WhoPlay.Wizard : WhoPlay.Thief;
+
+            power = 0;
+            ResetTimer();
         }
 
         public static float GetDistance(Vector2 pos, Vector2 target)

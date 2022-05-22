@@ -33,7 +33,7 @@ namespace Projectile
             staminaTexture = Globals.content.Load<Texture2D>("textures/stamina");
             CurrentState = PlayerState.Running;
             stamina = newStamina;
-            thiefRect = new Rectangle((int) pos.X, (int) pos.Y, (int) dims.X, (int) dims.Y);
+            thiefRect = new Rectangle((int)pos.X, (int)pos.Y, (int)dims.X, (int)dims.Y);
         }
 
         public void staminaUp()
@@ -50,7 +50,7 @@ namespace Projectile
             for (int i = 0; i < Globals.slots.Count(); i++)
             {
                 hitWall = false;
-                
+
                 if (thiefRect.Intersects(Globals.slots[i].rect))
                 {
                     if (Globals.slots[i].CurrentState != SlotsState.Walk)
@@ -79,85 +79,64 @@ namespace Projectile
         public override void Update(GameTime gameTime)
         {
             staminaUsage = 0;
-            staminaRect = new Rectangle((int)pos.X - 40, (int)pos.Y - 80, (int) stamina/5, 30);
-            elapsed += (float)gameTime.ElapsedGameTime.TotalSeconds;
+            staminaRect = new Rectangle((int)pos.X - 40, (int)pos.Y - 80, (int)stamina / 5, 30);
             thiefRect = new Rectangle((int)pos.X, (int)pos.Y, (int)dims.X, (int)dims.Y);
-            //hitWall = HitWallCheck(thiefRect);
 
-            if (!checkAim())
+            switch (CurrentState)
             {
-                if(CurrentState == PlayerState.Running)
-                {
+                case PlayerState.Running:
                     if (Globals.keyboard.GetPress("A"))
                     {
                         pos = new Vector2(pos.X - 4, pos.Y);
-                        //wallLevel = HitWallCheck(thiefRect);
-                        hitWall = HitWallCheck();
-                        if (!hitWall) {
-                            staminaUsage += 1;
-                        }
-                    }
-
-                    if (Globals.keyboard.GetPress("D"))
-                    {
-                        pos = new Vector2(pos.X + 4, pos.Y);
-                        //wallLevel = HitWallCheck(thiefRect);
                         hitWall = HitWallCheck();
                         if (!hitWall)
                         {
                             staminaUsage += 1;
                         }
                     }
-                }
-            }
-            else
-            {
-
-                if (Globals.keyboard.GetPress("W"))
-                {
-                    Globals.Power += 1;
-                    //staminaUsage += 5;
-                    //stamina -= 5;
-                }
-                if (Globals.keyboard.GetPress("S"))
-                {
-                    Globals.Power -= 1;
-                    //staminaUsage += 5;
-                    //stamina -= 5;
-                }
-            }
-
-
-            if (Globals.keyboard.GetPressRelease(Keys.Space))
-            {
-                if (!checkAim())
-                {
-                    CurrentState = PlayerState.Aiming;
-                    arrow.pos = new Vector2(pos.X + 90, pos.Y);
-                    arrow.item = null;
-                    staminaUsage += 5;
-
-                    //stamina -= 5;
-                }
-                else
-                {
-                    CurrentState = PlayerState.Running;
-                }
+                    if (Globals.keyboard.GetPress("D"))
+                    {
+                        pos = new Vector2(pos.X + 4, pos.Y);
+                        hitWall = HitWallCheck();
+                        if (!hitWall)
+                        {
+                            staminaUsage += 1;
+                        }
+                    }
+                    if (Globals.keyboard.GetPressRelease(Keys.Space))
+                    {
+                        CurrentState = PlayerState.Aiming;
+                        arrow.pos = new Vector2(pos.X + 90, pos.Y);
+                        arrow.item = null;
+                        staminaUsage += 5;
+                    }
+                    break;
+                case PlayerState.Aiming:
+                    if (Globals.keyboard.GetPress("W"))
+                    {
+                        Globals.Power += 1;
+                    }
+                    if (Globals.keyboard.GetPress("S"))
+                    {
+                        Globals.Power -= 1;
+                    }
+                    if (Globals.keyboard.GetPressRelease(Keys.Space))
+                    {
+                        CurrentState = PlayerState.Running;
+                    }
+                    break;
             }
 
             stamina -= staminaUsage;
+            if (pos.X >= 1120) { Globals.CurrentStatus = WhoWin.Thief; }
+            if (stamina <= 0) { Globals.CurrentStatus = WhoWin.Wizard; }
 
             base.Update(gameTime);
         }
 
         public override void Draw(Vector2 OFFSET)
         {
-            
 
-            //Debugging ว่าชนกำแพงไหม
-            Globals.spriteBatch.DrawString(engFonts, hitWall.ToString(), new Vector2(staminaRect.X, staminaRect.Y - 40), Color.Yellow);
-
-            Globals.spriteBatch.DrawString(engFonts, "-" + staminaUsage.ToString() , new Vector2(staminaRect.X + 100, staminaRect.Y + 40), Color.Yellow);
             Globals.spriteBatch.Draw(staminaTexture, staminaRect, Color.White);
             Globals.spriteBatch.DrawString(engFonts, stamina.ToString(), new Vector2(staminaRect.X + 5, staminaRect.Y + 5), Color.Black);
             base.Draw(OFFSET);

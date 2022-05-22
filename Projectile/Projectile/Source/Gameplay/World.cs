@@ -52,20 +52,13 @@ namespace Projectile
                 };
 
             }
-            Globals.slots[11] = new Dirt(WallType.Dirt, new Vector2(520, 572), 11)
-            {
-                CurrentState = SlotsState.Wall1
-            };
-            Globals.slots[13] = new Dirt(WallType.Dirt, new Vector2(600, 572), 13)
-            {
-                CurrentState = SlotsState.Wall3
-            };
+           
 
             Globals.CurrentPlayer = WhoPlay.Thief;
             thief = new Thief("player/thief", new Vector2(40, 542), new Vector2(90, 90), 500);
             wizard = new Wizard("player/wizard", new Vector2(1180, 542), new Vector2(90, 90));
 
-            treasure = new Treasure("treasure", new Vector2(wizard.pos.X - 40, wizard.pos.Y), new Vector2(40, 40));
+            treasure = new Treasure("treasure", new Vector2(1100, 522), new Vector2(71, 50));
 
             //set PaddProjectile to AddProjectile Func
             GameGlobals.PassProjectile = AddProjectile;
@@ -74,102 +67,57 @@ namespace Projectile
 
         public virtual void Update(GameTime gameTime)
         {
-
-            //treasure.Draw();
-            if (Globals.CurrentPlayer == WhoPlay.Thief)
+            if (Globals.CurrentStatus == WhoWin.Non)
             {
-                thief.Update(gameTime);
-                if (thief.checkAim())
+                if (Globals.CurrentPlayer == WhoPlay.Thief)
                 {
-                    thief.arrow.Update(gameTime);
-                    nameI = thief.arrow.itemName;
-                    ObjectDescription(nameI);
-                }
-            }
-            else
-            {
-                wizard.Update(gameTime);
-                if (wizard.checkAim())
-                {
-                    wizard.arrow.Update(gameTime);
-                    nameI = wizard.arrow.itemName;
-                    ObjectDescription(nameI);
-                }
-            }
-
-            if (projectiles.Count > 0)
-            {
-                projectiles[0].Update(gameTime, offset, null);
-                if (projectiles[0].isDone)
-                {
-                    // x = slot that projectile hit
-                    float x = (projectiles[0].pos.X - 80) / 40;
-                    int index = (int)MathF.Round(x, MidpointRounding.AwayFromZero);
-                    Console.WriteLine(projectiles[0].type);
-
-                    if (Globals.CurrentPlayer == WhoPlay.Wizard)
+                    thief.Update(gameTime);
+                    if (thief.checkAim())
                     {
-                        // add wall in slot index x
-                        AddWall(index, projectiles[0].type, gameTime);
+                        thief.arrow.Update(gameTime);
+                        nameI = thief.arrow.itemName;
+                        ObjectDescription(nameI);
                     }
-                    //thief.arrow.collision(thief.arrow.item.rect, Globals.slots[i].rect);
-
-                    if (Globals.CurrentPlayer == WhoPlay.Thief && index<26)
+                }
+                else
+                {
+                    wizard.Update(gameTime);
+                    if (wizard.checkAim())
                     {
-                        if (thief.arrow.collision(thief.arrow.item.rect, Globals.slots[index].rect))
+                        wizard.arrow.Update(gameTime);
+                        nameI = wizard.arrow.itemName;
+                        ObjectDescription(nameI);
+                    }
+                }
+
+                if (projectiles.Count > 0)
+                {
+                    projectiles[0].Update(gameTime, offset, null);
+                    if (projectiles[0].isDone)
+                    {
+                        // x = slot that projectile hit
+                        float x = (projectiles[0].pos.X - 80) / 40;
+                        int index = (int)MathF.Round(x, MidpointRounding.AwayFromZero);
+
+                        if (Globals.CurrentPlayer == WhoPlay.Wizard)
                         {
-                            if (nameI == "BlackHole")
-                            {
-                                //move thief
-                                thiefNew = thief;
-                                Globals.slots[index].DestroyWall();
-                                thiefNew.pos = new Vector2(projectiles[0].pos.X, thief.pos.Y);
-                            }
-                            else if (nameI == "Titan")
-                            {
-                                //ทำลายกำแพง 1 ตึก
-                                Globals.slots[index].DestroyWall();
-                            }
-                            else if (nameI == "Banana")
-                            {
-                                //เพิ่ม mp
-                                thief.staminaUp();
-                            }
-                            else if (nameI == "Jerry")
-                            {
-                                //ทำลายกำแพงเหลือ 1
-                                Globals.slots[index].Drop();
-                            }
-                            else if (nameI == "Missile")
-                            {
-                                //ทำลายกำแพง 1
-                                Globals.slots[index].DownLevel();
-                            }
-                            else if (nameI == "Water")
-                            {
-                                //nothing
-                            }
-                            else if (nameI == "Flower")
-                            {
-                                //nothing
-                            }
-                            else if (nameI == "Letter")
-                            {
-                                //win
-                                Random R = new Random();
-                                if (R.Next(1, 100) == 1)
-                                {
-                                    //คำสั่งชนะ
-                                }
-                            }
-                            //Globals.slots[index].DownLevel();
-                            //break;
+                            // add wall in slot index x
+                            AddWall(index, projectiles[0].type, gameTime);
+                        }
+
+                        if (Globals.CurrentPlayer == WhoPlay.Thief && index < 26)
+                        {
+                            ItemEffect(index);
+                        }
+
+                        projectiles.RemoveAt(0);
+                        Globals.SwapPlayer();
+                        switch (Globals.CurrentPlayer)
+                        {
+                            case WhoPlay.Thief: thief.CurrentState = PlayerState.Running; break;
+                            case WhoPlay.Wizard: wizard.CurrentState = PlayerState.Running; break;
                         }
                     }
-
-                    projectiles.RemoveAt(0);
-                    Globals.CurrentPlayer = Globals.CurrentPlayer == WhoPlay.Thief ? WhoPlay.Wizard : WhoPlay.Thief;
-                    Globals.ResetTimer();
                 }
             }
 
@@ -185,6 +133,60 @@ namespace Projectile
                 case "fire": wall = WallType.Fire; break;
             }
             Globals.slots[INDEX].Update(gameTime, wall);
+        }
+
+        public void ItemEffect(int INDEX)
+        {
+            if (nameI == "BlackHole")
+            {
+                //move thief
+                //thiefNew = thief;
+                Globals.slots[INDEX].DestroyWall();
+                thief.pos = new Vector2(projectiles[0].pos.X, thief.pos.Y);
+            }
+            else if (nameI == "Letter")
+            {
+                //win
+                Random R = new Random();
+                if (R.Next(1, 100) == 1)
+                {
+                    Globals.CurrentStatus = WhoWin.Thief;
+                }
+            }
+            else if (nameI == "Banana")
+            {
+                //เพิ่ม mp
+                thief.staminaUp();
+            }
+            if (thief.arrow.collision(thief.arrow.item.rect, Globals.slots[INDEX].rect))
+            {
+
+                if (nameI == "Titan")
+                {
+                    //ทำลายกำแพง 1 ตึก
+                    Globals.slots[INDEX].DestroyWall();
+                }
+
+                else if (nameI == "Jerry")
+                {
+                    //ทำลายกำแพงเหลือ 1
+                    Globals.slots[INDEX].Drop();
+                }
+                else if (nameI == "Missile")
+                {
+                    //ทำลายกำแพง 1
+                    Globals.slots[INDEX].DownLevel();
+                }
+                else if (nameI == "Water")
+                {
+                    //nothing
+                }
+                else if (nameI == "Flower")
+                {
+                    //nothing
+                }
+
+            }
         }
 
         public void ObjectDescription(string objname)
@@ -218,6 +220,7 @@ namespace Projectile
         public virtual void Draw(Vector2 OFFSET)
         {
             floor.Draw();
+            treasure.Draw();
             wizard.Draw(OFFSET);
             thief.Draw(OFFSET);
             foreach (Slots slot in Globals.slots)
