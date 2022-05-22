@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.810.18
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Projectile", "Projectile\Projectile.csproj", "{2AC6D68A-6993-428A-8159-013AB0C9BA28}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2AC6D68A-6993-428A-8159-013AB0C9BA28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AC6D68A-6993-428A-8159-013AB0C9BA28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AC6D68A-6993-428A-8159-013AB0C9BA28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AC6D68A-6993-428A-8159-013AB0C9BA28}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {01851CD3-B329-4EEF-BA22-5946AC5DC71F}
+	EndGlobalSection
+EndGlobal

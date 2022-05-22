@@ -1,0 +1,64 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <PublishReadyToRun>false</PublishReadyToRun>
+    <TieredCompilation>false</TieredCompilation>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Icon.ico" />
+    <None Remove="Icon.bmp" />
+    <None Remove="Content\textures\" />
+    <None Remove="Source\" />
+    <None Remove="Source\Engine\" />
+    <None Remove="Source\Engine\Input\" />
+    <None Remove="Source\Engine\Input\Keyboard \" />
+    <None Remove="Source\Gameplay\" />
+    <None Remove="Source\Gameplay\World\" />
+    <None Remove="Source\Gameplay\World\Units\" />
+    <None Remove="Source\Gameplay\World\Projectile\" />
+    <None Remove="Source\Gameplay\World\Player\" />
+    <None Remove="Content\fonts\" />
+    <None Remove="Source\Gameplay\World\Wall\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Icon.ico" />
+    <EmbeddedResource Include="Icon.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <MonoGameContentReference Include="Content\Content.mgcb" />
+  </ItemGroup>
+  <ItemGroup>
+    <TrimmerRootAssembly Include="Microsoft.Xna.Framework.Content.ContentTypeReader" Visible="false" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="MonoGame.Framework.DesktopGL" Version="3.8.0.1641" />
+    <PackageReference Include="MonoGame.Content.Builder.Task" Version="3.8.0.1641" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Content\textures\" />
+    <Folder Include="Source\" />
+    <Folder Include="Source\Engine\" />
+    <Folder Include="Source\Engine\Input\" />
+    <Folder Include="Source\Engine\Input\Keyboard \" />
+    <Folder Include="Source\Gameplay\" />
+    <Folder Include="Source\Gameplay\World\" />
+    <Folder Include="Source\Gameplay\World\Units\" />
+    <Folder Include="Source\Gameplay\World\Projectile\" />
+    <Folder Include="Source\Gameplay\World\Player\" />
+    <Folder Include="Content\fonts\" />
+    <Folder Include="Source\Gameplay\World\Wall\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Content\textures\Background.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Content\textures\Background.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>

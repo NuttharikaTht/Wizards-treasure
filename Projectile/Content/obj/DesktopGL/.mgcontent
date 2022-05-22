@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Profile>Reach</Profile>
+  <Platform>DesktopGL</Platform>
+  <Config />
+  <SourceFiles>
+    <File>C:/Users/praph/Desktop/ComGame/finish/Wizards-treasure/Projectile/Projectile/Content/fonts/Minecraft.spritefont</File>
+    <File>C:/Users/praph/Desktop/ComGame/finish/Wizards-treasure/Projectile/Projectile/Content/fonts/Minecraft_24.spritefont</File>
+    <File>C:/Users/praph/Desktop/ComGame/finish/Wizards-treasure/Projectile/Projectile/Content/GameState/bg_game.jpg</File>
+    <File>C:/Users/praph/Desktop/ComGame/finish/Wizards-treasure/Projectile/Projectile/Content/GameState/pause.jpg</File>
+    <File>C:/Users/praph/Desktop/ComGame/finish/Wizards-treasure/Projectile/Projectile/Content/GameState/time.jpg</File>
+    <File>C:/Users/praph/Desktop/ComGame/finish/Wizards-treasure/Projectile/Projectile/Content/MenuState/bg_menu.png</File>
+    <File>C:/Users/praph/Desktop/ComGame/finish/Wizards-treasure/Projectile/Projectile/Content/MenuState/bt_exit.png</File>
+    <File>C:/Users/praph/Desktop/ComGame/finish/Wizards-treasure/Projectile/Projectile/Content/MenuState/bt_start.png</File>
+    <File>C:/Users/praph/Desktop/ComGame/finish/Wizards-treasure/Projectile/Projectile/Content/MenuState/logo.png</File>
+    <File>C:/Users/praph/Desktop/ComGame/finish/Wizards-treasure/Projectile/Projectile/Content/MenuState/newlogo.png</File>
+    <File>C:/Users/praph/Desktop/ComGame/finish/Wizards-treasure/Projectile/Projectile/Content/PauseState/bg_pause.png</File>
+    <File>C:/Users/praph/Desktop/ComGame/finish/Wizards-treasure/Projectile/Projectile/Content/PauseState/exit.png</File>
+    <File>C:/Users/praph/Desktop/ComGame/finish/Wizards-treasure/Projectile/Projectile/Content/PauseState/left.png</File>
+    <File>C:/Users/praph/Desktop/ComGame/finish/Wizards-treasure/Projectile/Projectile/Content/PauseState/restart.png</File>
+    <File>C:/Users/praph/Desktop/ComGame/finish/Wizards-treasure/Projectile/Projectile/Content/PauseState/resume.png</File>
+    <File>C:/Users/praph/Desktop/ComGame/finish/Wizards-treasure/Projectile/Projectile/Content/PauseState/right.png</File>
+    <File>C:/Users/praph/Desktop/ComGame/finish/Wizards-treasure/Projectile/Projectile/Content/screen/home_screen/bg.png</File>
+    <File>C:/Users/praph/Desktop/ComGame/finish/Wizards-treasure/Projectile/Projectile/Content/Sound/sound.mp3</File>
+    <File>C:/Users/praph/Desktop/ComGame/finish/Wizards-treasure/Projectile/Projectile/Content/textures/ammo/thief/Banana.png</File>
+    <File>C:/Users/praph/Desktop/ComGame/finish/Wizards-treasure/Projectile/Projectile/Content/textures/ammo/thief/BlackHole.png</File>
+    <File>C:/Users/praph/Desktop/ComGame/finish/Wizards-treasure/Projectile/Projectile/Content/textures/ammo/thief/Flower.png</File>
+    <File>C:/Users/praph/Desktop/ComGame/finish/Wizards-treasure/Projectile/Projectile/Content/textures/ammo/thief/Jerry.png</File>
+    <File>C:/Users/praph/Desktop/ComGame/finish/Wizards-treasure/Projectile/Projectile/Content/textures/ammo/thief/Letter.png</File>
+    <File>C:/Users/praph/Desktop/ComGame/finish/Wizards-treasure/Projectile/Projectile/Content/textures/ammo/thief/Missile.png</File>
+    <File>C:/Users/praph/Desktop/ComGame/finish/Wizards-treasure/Projectile/Projectile/Content/textures/ammo/thief/Titan.png</File>
+    <File>C:/Users/praph/Desktop/ComGame/finish/Wizards-treasure/Projectile/Projectile/Content/textures/ammo/thief/Water.png</File>
+    <File>C:/Users/praph/Desktop/ComGame/finish/Wizards-treasure/Projectile/Projectile/Content/textures/blockLine.png</File>
+    <File>C:/Users/praph/Desktop/ComGame/finish/Wizards-treasure/Projectile/Projectile/Content/textures/floor.png</File>
+    <File>C:/Users/praph/Desktop/ComGame/finish/Wizards-treasure/Projectile/Projectile/Content/textures/obj.png</File>
+    <File>C:/Users/praph/Desktop/ComGame/finish/Wizards-treasure/Projectile/Projectile/Content/textures/player/thief.png</File>
+    <File>C:/Users/praph/Desktop/ComGame/finish/Wizards-treasure/Projectile/Projectile/Content/textures/player/wizard.png</File>
+    <File>C:/Users/praph/Desktop/ComGame/finish/Wizards-treasure/Projectile/Projectile/Content/textures/rect.png</File>
+    <File>C:/Users/praph/Desktop/ComGame/finish/Wizards-treasure/Projectile/Projectile/Content/textures/shooter/aiming.png</File>
+    <File>C:/Users/praph/Desktop/ComGame/finish/Wizards-treasure/Projectile/Projectile/Content/textures/shooter/arrow.png</File>
+    <File>C:/Users/praph/Desktop/ComGame/finish/Wizards-treasure/Projectile/Projectile/Content/textures/stamina.png</File>
+    <File>C:/Users/praph/Desktop/ComGame/finish/Wizards-treasure/Projectile/Projectile/Content/textures/treasure.png</File>
+    <File>C:/Users/praph/Desktop/ComGame/finish/Wizards-treasure/Projectile/Projectile/Content/textures/wall/dirt/lv1.png</File>
+    <File>C:/Users/praph/Desktop/ComGame/finish/Wizards-treasure/Projectile/Projectile/Content/textures/wall/dirt/lv2.png</File>
+    <File>C:/Users/praph/Desktop/ComGame/finish/Wizards-treasure/Projectile/Projectile/Content/textures/wall/dirt/lv3.png</File>
+    <File>C:/Users/praph/Desktop/ComGame/finish/Wizards-treasure/Projectile/Projectile/Content/textures/wall/dirt/lv4.png</File>
+    <File>C:/Users/praph/Desktop/ComGame/finish/Wizards-treasure/Projectile/Projectile/Content/textures/wall/dirt/lv5.png</File>
+  </SourceFiles>
+  <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+  </DestFiles>
+</SourceFileCollection>
