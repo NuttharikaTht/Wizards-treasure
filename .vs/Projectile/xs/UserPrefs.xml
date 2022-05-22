@@ -2,8 +2,7 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="Projectile/Source/Gameplay/World.cs">
     <Files>
       <File FileName="Projectile/Source/Gameplay/World/Player/Thief.cs" Line="152" Column="122" />
-      <File FileName="Projectile/Source/Gameplay/World.cs" Line="254" Column="114" />
-      <File FileName="Projectile/Source/Engine/Slots.cs" Line="194" Column="1" />
+      <File FileName="Projectile/Source/Gameplay/World.cs" Line="200" Column="93" />
       <File FileName="Projectile/Source/Gameplay/World/Projectile/obj.cs" Line="1" Column="1" />
       <File FileName="Projectile/Source/Engine/Player.cs" Line="1" Column="1" />
       <File FileName="Projectile/Source/Gameplay/World/Wall/Dirt.cs" Line="11" Column="1" />
@@ -24,12 +23,10 @@
                     <Node name="Player" expanded="True" />
                     <Node name="Projectile" expanded="True" />
                     <Node name="Structure" expanded="True" />
-                    <Node name="Wall" expanded="True" />
                   </Node>
                   <Node name="World.cs" selected="True" />
                 </Node>
               </Node>
-              <Node name="States" expanded="True" />
             </Node>
           </Node>
         </State>
