@@ -6,7 +6,6 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using Projectile.Source.Gameplay.World.Wall;
 
 namespace Projectile
 {
@@ -148,9 +147,10 @@ namespace Projectile
             if (nameI == "BlackHole")
             {
                 //move thief
-                //thiefNew = thief;
                 Globals.slots[INDEX].DestroyWall();
                 thief.pos = new Vector2(projectiles[0].pos.X, thief.pos.Y);
+                thief.staminaRect.X = (int)thief.pos.X - 40;
+                thief.staminaRect.Y = (int)thief.pos.Y - 80;
             }
             else if (nameI == "Letter")
             {

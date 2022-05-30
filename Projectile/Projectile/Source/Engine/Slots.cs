@@ -68,6 +68,7 @@ namespace Projectile
                 case SlotsState.Walk:
                     dims = new Vector2(40, 40);
                     pos.Y = 572;
+                    model = null;
                     break;
                 case SlotsState.Wall1:
                     dims = new Vector2(40, 40);
